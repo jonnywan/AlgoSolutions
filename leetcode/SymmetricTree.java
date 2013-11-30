@@ -42,18 +42,39 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+import java.util.*;
+
 public class SymmetricTree {
     public boolean isSymmetric(TreeNode root) {
-        if(root == null)
-            return true;
-        return isSymmetricHelper(root.left, root.right);
+        return root == null || isSymmetricHelper(root.left, root.right);
     }
 
     public boolean isSymmetricHelper(TreeNode p, TreeNode q) {
-        if(p == null && q == null)
-            return true;
-        if(p == null && q != null || p != null && q == null)
-            return false;
+        if(p == null && q == null || p != null && q == null || p == null && q != null) 
+            return p == null && q == null;
         return (p.val == q.val) && isSymmetricHelper(p.left, q.right) && isSymmetricHelper(p.right, q.left);
+    } 
+
+/***********************************************************************************************************/
+
+    public boolean isSymmetric(TreeNode root) {
+        if(root == null)
+            return true;
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.offer(root.left);
+        queue.offer(root.right);
+        while(!queue.isEmpty()) {
+            TreeNode lNode = queue.poll();
+            TreeNode rNode = queue.poll();
+            if(lNode == null && rNode == null)
+                continue;
+            if(lNode == null || rNode == null || lNode.val != rNode.val)
+                return false;
+            queue.offer(lNode.left);
+            queue.offer(rNode.right);
+            queue.offer(lNode.right);
+            queue.offer(rNode.left);
+        }
+        return true;
     }
 }
