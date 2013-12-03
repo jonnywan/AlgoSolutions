@@ -38,16 +38,16 @@ public class BinaryTreeLevelOrderTraversalII {
         curLevel.add(root);
         while(!curLevel.isEmpty()) {
             TreeNode cur = curLevel.remove();
+            saveNodeVal.add(cur.val);
             if(cur.left != null)
                 nextLevel.add(cur.left);
             if(cur.right != null) 
                 nextLevel.add(cur.right);
-            saveNodeVal.add(cur.val);
             if(curLevel.isEmpty()) {
                 result.add(saveNodeVal);
+                saveNodeVal = new ArrayList<Integer>();
                 curLevel = nextLevel;
                 nextLevel = new LinkedList<TreeNode>();
-                saveNodeVal = new ArrayList<Integer>();
             }
         }
         Collections.reverse(result);
