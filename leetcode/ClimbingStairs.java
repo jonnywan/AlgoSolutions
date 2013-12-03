@@ -3,7 +3,6 @@
  * Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
  */
 public class ClimbingStairs {
-/************************ updated 2013/11/20 ***********************/
     public int climbStairs(int n) {
         int[] res = new int[n + 1];
         res[0] = 1;
@@ -13,7 +12,7 @@ public class ClimbingStairs {
         return res[n];
     }
 
-
+/************************ updated 2013/11/20 ***********************/
 
     public int climbStairs(int n) {
         int a = 0, b = 1, res = 1;
