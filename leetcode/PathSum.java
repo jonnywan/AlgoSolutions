@@ -27,9 +27,7 @@ public class PathSum {
         if(root == null)
             return false;
         if(root.left == null && root.right == null)
-            return sum == root.val;
-        boolean L = (root.left == null) ? false : hasPathSum(root.left, sum - root.val);
-        boolean R = (root.right == null) ? false : hasPathSum(root.right, sum - root.val);
-        return L || R;
+            return root.val == sum;
+        return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
     }
 }
