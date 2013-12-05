@@ -27,26 +27,25 @@
  * }
  */
 public class PathSumII {
+/***************************** updated 2012/12/05 *****************************/
     public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> path = new ArrayList<Integer>();
-        pathSumHelper(root, sum, result, path);
-        return result;
-    }
+        pathSumHelper(root, res, sum, path);
+        return res;
+    } 
 
-    public void pathSumHelper(TreeNode root, int sum, ArrayList<ArrayList<Integer>> result, ArrayList<Integer> path) {
+    public void pathSumHelper(TreeNode root, ArrayList<ArrayList<Integer>> res, 
+            int sum, ArrayList<Integer> path) {
         if(root == null)
             return ;
+        path.add(root.val);
         if(root.left == null && root.right == null && root.val == sum) {
             ArrayList<Integer> temp = new ArrayList<Integer>(path);
-            temp.add(root.val);
-            result.add(temp);
+            res.add(temp);
         }
-        if(root.left != null || root.right != null) {
-            path.add(root.val);
-            pathSumHelper(root.left, sum - root.val, result, path);
-            pathSumHelper(root.right, sum - root.val, result, path);
-            path.remove(path.size() - 1);
-        }
+        pathSumHelper(root.left, res, sum - root.val, path);
+        pathSumHelper(root.right, res, sum - root.val, path);
+        path.remove(path.size() - 1);
     }
 }
