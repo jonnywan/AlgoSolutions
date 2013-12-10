@@ -15,19 +15,20 @@
  */
 
 public class BalancedBinaryTree {
-/*  public boolean isBalanced(TreeNode root) {
+    public int depth(TreeNode root) {
+        if(root == null)
+            return 0;
+        return 1 + Math.max(depth(root.left), depth(root.right));
+    }
+
+    public boolean isBalanced(TreeNode root) {
         if(root == null)
             return true;
-        return Math.abs(binaryTreeDepth(root.left) - binaryTreeDepth(root.right)) <= 1 
+        return Math.abs(depth(root.left) - depth(root.right)) <= 1 
             && isBalanced(root.left) && isBalanced(root.right);
     }
 
-    public int binaryTreeDepth(TreeNode root) {
-        if(root == null)
-            return 0;
-        else
-            return 1 + Math.max(binaryTreeDepth(root.left), binaryTreeDepth(root.right));
-    }*/
+/*****************************************************************************/
 
     public boolean isBalanced(TreeNode root) {
         return balancedHelper(root) >= 0 ? true : false;
