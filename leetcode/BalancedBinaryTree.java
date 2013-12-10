@@ -31,7 +31,7 @@ public class BalancedBinaryTree {
 /*****************************************************************************/
 
     public boolean isBalanced(TreeNode root) {
-        return balancedHelper(root) >= 0 ? true : false;
+        return balancedHelper(root) >= 0;
     }
 
     public int balancedHelper(TreeNode root) {
