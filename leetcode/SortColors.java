@@ -35,9 +35,9 @@ public class SortColors {
         for(int i = 0; i < A.length; i++) {
             if(A[i] == 0)
                 redCount++;
-            if(A[i] == 1)
+            else if(A[i] == 1)
                 whiteCount++;
-            if(A[i] == 2)
+            else
                 blueCount++;
         }
         for(int i = 0; i < A.length; i++) {
