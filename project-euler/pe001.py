@@ -12,7 +12,7 @@ def calculate():
     for i in range(0, 1000):
         if i % 3 == 0 or i % 5 == 0:
             cnt += i
-    return cnt
+    print(cnt)
 
 def calculate_1():
     cnt = 0
@@ -21,6 +21,7 @@ def calculate_1():
     for i in range(0, 1000, 5):
         if i % 3 != 0:
             cnt += i
-    return cnt
+    print(cnt)
 
-print(calculate())
+calculate()
+calculate_1()

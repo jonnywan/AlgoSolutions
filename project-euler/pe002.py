@@ -15,6 +15,7 @@ def calculate():
         a, b = b, a + b
         if b % 2 == 0:
             total += b
-    return total
+    print(total)
 
-print(calculate())
+calculate()
+
