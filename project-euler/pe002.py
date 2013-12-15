@@ -17,5 +17,6 @@ def calculate():
             total += b
     print(total)
 
-calculate()
+if __name__ == '__main__':
+    calculate()
 

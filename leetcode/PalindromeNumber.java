@@ -19,9 +19,9 @@ public class PalindromeNumber {
     public boolean isPalindrome(int x) {
         if(x < 0)
             return false;
-        int rev = 0, last = 0, temp = x;
+        int rev = 0, temp = x;
         while(temp != 0) {
-            last = temp % 10;
+            int last = temp % 10;
             rev = 10 * rev + last;
             temp /= 10;
         }

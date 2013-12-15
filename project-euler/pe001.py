@@ -23,5 +23,6 @@ def calculate_1():
             cnt += i
     print(cnt)
 
-calculate()
-calculate_1()
+if __name__ == '__main__':
+    calculate()
+    calculate_1()
