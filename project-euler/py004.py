@@ -22,3 +22,6 @@ if __name__ == '__main__':
             if is_palindrome(i * j) and i * j > max_palindrome:
                 max_palindrome = i * j
     print(max_palindrome)
+
+for i in range(1, 100):
+    print("11 *", i, "=", 11 * i)
