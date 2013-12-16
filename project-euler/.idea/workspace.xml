@@ -169,7 +169,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="project-euler" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py004.py" />
+      <option name="SCRIPT_NAME" value="F:\AlgoSolutions\project-euler\pe004.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -189,7 +189,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="project-euler" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py005.py" />
+      <option name="SCRIPT_NAME" value="F:\AlgoSolutions\project-euler\pe005.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -362,17 +362,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.67156863" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.67156863" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -397,7 +397,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/py004.py">
+    <entry file="file://$PROJECT_DIR$/pe004.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="18" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="551" />
       </provider>
@@ -412,17 +412,17 @@
         <state line="11" column="28" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="627" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py003.py">
+    <entry file="file://$PROJECT_DIR$/pe003.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="18" selection-start="272" selection-end="272" vertical-scroll-proportion="0.45714286" vertical-offset="90" max-vertical-offset="475" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py005.py">
+    <entry file="file://$PROJECT_DIR$/pe005.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="8" selection-start="573" selection-end="573" vertical-scroll-proportion="1.3818182" vertical-offset="0" max-vertical-offset="741" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py004.py">
+    <entry file="file://$PROJECT_DIR$/pe004.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="21" selection-start="903" selection-end="903" vertical-scroll-proportion="0.25974026" vertical-offset="527" max-vertical-offset="912" />
       </provider>
