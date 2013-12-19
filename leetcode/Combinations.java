@@ -15,7 +15,6 @@
  * ]
  */
 public class Combinations {
-
     public ArrayList<ArrayList<Integer>> combine(int n, int k) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
         if(k == 1) {
