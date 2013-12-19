@@ -1,5 +1,6 @@
 /*
- * Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+ * Given two integers n and k, return all possible combinations of k numbers out 
+ * of 1 ... n.
 
  * For example,
  * If n = 4 and k = 2, a solution is:
@@ -14,24 +15,22 @@
  * ]
  */
 public class Combinations {
-    public ArrayList<ArrayList<Integer>> combine(int n, ink k) {
-        if(k == 0)
-            return null;
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    public ArrayList<ArrayList<Integer>> combine(int n, int k) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
         if(k == 1) {
             for(int i = 1; i <= n; i++) {
-                ArrayList<Integer> temp = new ArrayList<Integer>();
-                temp.add(i);
-                result.add(temp);
+                ArrayList<Integer> list = new ArrayList<Integer>();
+                list.add(i);
+                res.add(list);
             }
-            return result;
+            return res;
         }
         for(int i = n; i >= k; i--) {
-            for(ArrayList<Integer> temp : combine(i - 1, k - 1)) {
-                temp.add(i);
-                result.add(temp);
+            for(ArrayList<Integer> list : combine(i - 1, k - 1)) {
+                list.add(i);
+                res.add(list);
             }
         }
-        return result;
+        return res;
     }
 }
