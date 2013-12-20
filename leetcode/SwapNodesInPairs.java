@@ -19,13 +19,34 @@
  * }
  */
 public class SwapNodesInPairs {
+/*************************** updated 2013/12/20 ******************************/
+
     public ListNode swapPairs(ListNode head) {
         if(head == null || head.next == null)
             return head;
-        ListNode result = head.next;
-        ListNode nextList = swapPairs(head.next.next);
-        head.next = nextList;
-        result.next = head;
-        return result;
+        ListNode root = head.next;
+        head.next = swapPairs(head.next.next);
+        root.next = head;
+        return root;
+    }
+
+/*****************************************************************************/
+    
+    public ListNode swapPairs(ListNode head) {
+        if(head == null || head.next == null) 
+            return head;
+        ListNode root = new ListNode(0);
+        ListNode cur1 = head, cur2 = head.next, cur = root;
+        while(cur2 != null) {
+            cur.next = cur2;
+            cur1.next = cur2.next;
+            cur2.next = cur1;
+            cur = cur1;
+            if(cur1.next == null)
+                break;
+            cur1 = cur1.next;
+            cur2 = cur1.next;
+        }
+        return root.next;
     }
 }
