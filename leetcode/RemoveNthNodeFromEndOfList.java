@@ -12,35 +12,14 @@
  */
 public class RemoveNthNodeFromEndOfList {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode temp = new ListNode(0);
-        temp.next = head;
-        ListNode cur = temp.next;
-        int len = 1;
-        while(cur.next != null) {
-            cur = cur.next;
-            len++;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode cur1 = dummy, cur2 = dummy;
+        for(int i = 0; cur2.next != null; i++, cur2 = cur2.next) {
+            if(i >= n)
+                cur1 = cur1.next;
         }
-        cur = temp;
-        for(int i = 0; i < len - n; i++) {
-            cur = cur.next;
-        }
-        cur.next = cur.next.next;
-        return temp.next;
+        cur1.next = cur1.next.next;
+        return dummy.next;
     }
-
-/*  public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode temp = new ListNode(0);
-        temp.next = head;
-        ListNode cur = temp;
-        while(n > 0) {
-            head = head.next;
-            n--;
-        }
-        while(head != null) {
-            head = head.next;
-            cur = cur.next;
-        }
-        cur.next = cur.next.next;
-        return temp.next;
-    }*/
 }
