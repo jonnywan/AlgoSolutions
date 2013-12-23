@@ -14,13 +14,13 @@ public class SearchInRotatedSortedArray {
             int mid = low + (high - low) / 2;
             if(A[mid] == target)
                 return mid;
-            if(A[mid] >= A[low]) {
-                if(target >= A[low] && target < A[mid])
+            else if(A[low] <= A[mid]) {
+                if(A[low] <= target && target < A[mid])
                     high = mid - 1;
                 else
                     low = mid + 1;
             } else {
-                if(target > A[mid] && target <= A[high])
+                if(A[mid] < target && target <= A[high])
                     low = mid + 1;
                 else 
                     high = mid - 1;
