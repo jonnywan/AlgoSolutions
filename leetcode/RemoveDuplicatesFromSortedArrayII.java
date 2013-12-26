@@ -26,14 +26,12 @@ public class RemoveDuplicatesFromSortedArrayII {
     public int removeDuplicates(int[] A) {
         if(A.length == 0 || A.length == 1)
             return A.length;
-        int cnt = 2, index = 2, temp = A[0];
+        int cnt = 2, temp = A[0], prev;
         for(int i = 2; i < A.length; i++) {
-            int compare = (index == i - 2) ? temp : A[i - 2];
-            if(A[i] != A[i - 1] || A[i - 1] != compare) {
-                index = cnt;
-                temp = A[cnt];
+            prev = A[i - 1];
+            if(A[i] != A[i - 1] || A[i - 1] != temp)
                 A[cnt++] = A[i];
-            }
+            temp = prev;
         }
         return cnt;
     }
