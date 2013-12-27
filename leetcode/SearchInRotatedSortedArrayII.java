@@ -10,18 +10,18 @@ public class SearchInRotatedSortedArrayII {
     public boolean search(int[] A, int target) {
         int low = 0, high = A.length - 1;
         while(low <= high) {
-            while(low < high && A[low] == A[high]) {
+            while(low < high && A[low] == A[high])
                 low++;
-            }
             int mid = low + (high - low) / 2;
-            if(target == A[mid])
+            if(A[mid] == target)
                 return true;
-            if(A[low] <= A[mid]) {
-                if(target < A[mid] && target >= A[low])
+            else if(A[low] <= A[mid]) {
+                if(A[low] <= target && target < A[mid])
                     high = mid - 1;
-                else low = mid + 1;
+                else
+                    low = mid + 1;
             } else {
-                if(target > A[mid] && target <= A[high])
+                if(A[mid] < target && target <= A[high])
                     low = mid + 1;
                 else
                     high = mid - 1;
@@ -30,11 +30,13 @@ public class SearchInRotatedSortedArrayII {
         return false;
     }
 
-/*  public boolean search(int[] A, int target) {
+/*****************************************************************************/
+
+    public boolean search(int[] A, int target) {
         for(int i = 0; i < A.length; i++) {
             if(target == A[i])
                 return true;
         }
         return false;
-    } */
+    } 
 }
