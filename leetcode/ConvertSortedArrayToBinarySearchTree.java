@@ -12,16 +12,16 @@
  */
 public class ConvertSortedArrayToBinarySearchTree {
     public TreeNode sortedArrayToBST(int[] num) {
-        return sortedArrayToBSTHelper(num, 0, num.length - 1);
+        return helper(num, 0, num.length - 1);
     }
 
-    public TreeNode sortedArrayToBSTHelper(int[] num, int start, int end) {
+    public TreeNode helper(int[] num, int start, int end) {
         if(start > end)
             return null;
         int mid = start + (end - start) / 2;
-        TreeNode result = new TreeNode(num[mid]);
-        result.left = sortedArrayToBSTHelper(num, start, mid - 1);
-        result.right = sortedArrayToBSTHelper(num, mid + 1, end);
-        return result;
+        TreeNode root = new TreeNode(num[mid]);
+        root.left = helper(num, start, mid - 1);
+        root.right = helper(num, mid + 1, end);
+        return root;
     }
 }
