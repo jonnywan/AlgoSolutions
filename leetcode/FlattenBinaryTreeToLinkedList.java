@@ -49,8 +49,6 @@ public class FlattenBinaryTreeToLinkedList {
         root.right = R;
     } 
 
-    
-    
 /***************************** updated 2013/12/29 ****************************/
 
     public void flatten(TreeNode root) {
