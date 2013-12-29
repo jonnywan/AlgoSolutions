@@ -22,7 +22,8 @@
  *             \
  *              6
  * Hints:
- * If you notice carefully in the flattened tree, each node's right child points to the next node of a pre-order traversal.
+ * If you notice carefully in the flattened tree, each node's right child points 
+ * to the next node of a pre-order traversal.
  */
 /**
  * Definition for binary tree
@@ -37,15 +38,14 @@ public class FlattenBinaryTreeToLinkedList {
     public void flatten(TreeNode root) {
         if(root == null)
             return ;
-        TreeNode left = root.left;
-        TreeNode right = root.right;
-        flatten(left);
-        flatten(right);
+        flatten(root.left);
+        flatten(root.right);
+        TreeNode R = root.right;
+        root.right = root.left;
         root.left = null;
-        root.right = left;
         while(root.right != null) {
             root = root.right;
         }
-        root.right = right;
-    }
+        root.right = R;
+    } 
 }
