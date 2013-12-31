@@ -19,73 +19,70 @@
  *  []
  * ]
  */
-package info.mitcc.leetcode;
 
 import java.util.*;
 
 public class Subsets {
-/*	public String getBinary(int num, int len) {
-		String str = Integer.toBinaryString(num);
-		String s = "";
-		if(str.length() < len) 
-			for(int i = 0; i < len - str.length(); i++) 
-				s += "0";
-		s += str;
-		return s;
-	}
-	
-	public ArrayList<ArrayList<Integer>> subsets(int[] S) {
-		Arrays.sort(S);
-		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-		int len = S.length;
-		for(int i = 0; i < (1 << len); i++) {
-			String s = getBinary(i, len);
-			ArrayList<Integer> temp = new ArrayList<Integer>();
-			for(int j = 0; j < len; j++)
-				if(s.charAt(j) == '1')
-					temp.add(S[j]);
-			result.add(temp);
-		}
-		return result;
-	}*/
-	
-/*	public ArrayList<ArrayList<Integer>> subsets(int[] S) {
-		Arrays.sort(S);
-		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-		result.add(new ArrayList<Integer>());
-		for(int i = 0; i < S.length; i++) {
-			int size = result.size();
-			for(int j = 0; j < size; j++) {
-				ArrayList<Integer> pre = new ArrayList<Integer>(result.get(j));
-				pre.add(S[i]);
-				result.add(pre);
-			}
-		}
-		return result;
-	}*/
-	
-	ArrayList<ArrayList<Integer>> result = null;
-	
-	public void dfs(int[] S, int pos, ArrayList<Integer> temp) {
-		for(int i = pos; i < S.length; i++) {
-			temp.add(S[i]);
-			result.add(new ArrayList<Integer>(temp));
-			dfs(S, i + 1, temp);
-			temp.remove(temp.size() - 1);
-		}
-	}
+/**************************** updated 2014/01/01 *****************************/
+    public static String convertInt2BinStr(int n, int len) {
+        String s = Integer.toBinaryString(n);
+        while(s.length() < len) {
+            s = "0" + s;
+        }
+        return s;
+    }
 
-	public ArrayList<ArrayList<Integer>> subsets(int[] S) {
-		Arrays.sort(S);
-		result = new ArrayList<ArrayList<Integer>>();
-		ArrayList<Integer> temp = new ArrayList<Integer>();
-		result.add(temp);
-		dfs(S, 0, temp);
-		return result;
-	}
-	
-	public static void main(String[] args) {
-		int[] S = {1, 2, 3};
-		System.out.println(new Subsets().subsets(S));
-	}
+    public ArrayList<ArrayList<Integer>> subsets(int[] S) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        int len = S.length;
+        Arrays.sort(S);
+        for(int i = 0; i < (1 << len); i++) {
+            String s = convertInt2BinStr(i, len);
+            ArrayList<Integer> list = new ArrayList<Integer>();
+            for(int j = 0; j < len; j++) {
+                if(s.charAt(j) == '1')
+                    list.add(S[j]);
+            }
+            res.add(list);
+        }
+        return res;
+    }
+
+/*****************************************************************************/
+    
+    public ArrayList<ArrayList<Integer>> subsets(int[] S) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        Arrays.sort(S);
+        res.add(new ArrayList<Integer>());
+        for(int i = 0; i < S.length; i++) {
+            int k = res.size();
+            for(int j = 0; j < k; j++) {
+                ArrayList<Integer> list = new ArrayList<Integer>(res.get(j));
+                list.add(S[i]);
+                res.add(list);
+            }
+        }
+        return res;
+    }
+
+/*****************************************************************************/
+
+    public void dfs(int[] S, int pos, ArrayList<ArrayList<Integer>> res, 
+            ArrayList<Integer> list) {
+        for(int i = pos; i < S.length; i++) {
+            list.add(S[i]);
+            res.add(new ArrayList<Integer>(list));
+            dfs(S, i + 1, res, list);
+            list.remove(list.size() - 1);
+        }
+    }
+
+    public ArrayList<ArrayList<Integer>> subsets(int[] S) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        Arrays.sort(S);
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        res.add(list);
+        dfs(S, 0, res, list);
+        return res;
+    }
 }
