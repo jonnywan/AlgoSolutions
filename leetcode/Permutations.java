@@ -34,23 +34,20 @@ public class Permutations {
     public ArrayList<ArrayList<Integer>> permute(int[] num) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> list = new ArrayList<Integer>();
-        boolean[] isVisited = new boolean[num.length];
-        dfs(res, list,isVisited, num);
+        dfs(res, list, num);
         return res;
     }
 
-    public void dfs(ArrayList<ArrayList<Integer>> res, ArrayList<Integer> list,
-            boolean[] isVisited, int[] num) {
+    public void dfs(ArrayList<ArrayList<Integer>> res, ArrayList<Integer> list, 
+            int[] num) {
         if(list.size() == num.length) {
             res.add(new ArrayList<Integer>(list));
             return ;
         }
         for(int i = 0; i < num.length; i++) {
-            if(isVisited[i] == false) {
-                isVisited[i] = true;
+            if(list.indexOf(num[i]) == - 1) {
                 list.add(num[i]);
-                dfs(res, list, isVisited, num);
-                isVisited[i] = false;
+                dfs(res, list, num);
                 list.remove(list.size() - 1);
             }
         }
