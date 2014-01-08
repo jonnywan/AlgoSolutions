@@ -13,25 +13,11 @@ public class Prime {
         return true;
     }
 
-    public static boolean[] isPrime(int n) {
-        if(n < 0)
-            throw new IllegalArgumentException("Negative input");
+    public static boolean[] isPrimeArray(int n) {
         boolean[] prime = new boolean[n + 1];
         Arrays.fill(prime, true);
         prime[0] = prime[1] = false;
         for(int i = 2; i * i <= n; i++) {
-            for(int j = i * i; j <= n; j += i) {
-                prime[j] = false;
-            }
-        }
-        return prime;
-    }
-
-    public static boolean[] isPrime(int n) {
-        boolean[] prime = new boolean[n + 1];
-        Arrays.fill(prime, true);
-        prime[0] = prime[1] = false;
-        for(int i = 2; i <= n; i++) {
             if(prime[i]) {
                 for(int j = i * i; j <= n; j += i) {
                     prime[j] = false;
