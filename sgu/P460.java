@@ -45,6 +45,7 @@ sample output
 contest
 hero
 lady
+s
 contests
 heroes
 ladies
@@ -53,7 +54,7 @@ ladies
 import java.util.*;
 
 public class P460 {
-    public static String plural(String word) {
+/*  public static String plural(String word) {
         int len = word.length();
         if(word.substring(len - 2, len).equals("ch") || 
                 word.charAt(len - 1) == 'x' || word.charAt(len - 1) == 's' || 
@@ -67,6 +68,18 @@ public class P460 {
             word = word.substring(0, len - 1) + "ies";
         else
             word += "s";
+        return word;
+    }*/
+
+    public static String plural(String word) {
+        String[] from = {"ch", "x", "s", "o", "f", "fe", "y", ""};
+        String[] to = {"ches", "xes", "ses", "oes", "ves", "ves", "ies", "s"};
+        for(int i = 0; i < from.length; i++) {
+            if(word.endsWith(from[i])) {
+                word = word.substring(0, word.length() - from[i].length()) + to[i];
+                break;
+            }
+        }
         return word;
     }
 
