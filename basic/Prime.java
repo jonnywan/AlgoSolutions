@@ -15,7 +15,7 @@ public class Prime {
 
     public static boolean[] isPrimeArray(int n) {
         if(n < 0)
-            throw new IllegalArgumentException("Negative input);
+            throw new IllegalArgumentException("Negative input");
         boolean[] prime = new boolean[n + 1];
         Arrays.fill(prime, true);
         prime[0] = prime[1] = false;
