@@ -1,5 +1,5 @@
 public class ConvertSortedListToBinarySearchTree {
-/*  public TreeNode sortedListToBST(ListNode head) {
+    public TreeNode sortedListToBST(ListNode head) {
         int len = 0;
         ListNode cur = head;
         while(cur != null) {
@@ -22,24 +22,24 @@ public class ConvertSortedListToBinarySearchTree {
         }
         root.right = sortedListToBSTHelper(head, mid + 1, end);
         return root;
-    }*/
+    }
+/***************************** updated 2014.01.10 ****************************/
 
     public TreeNode sortedListToBST(ListNode head) {
         if(head == null)
             return null;
         if(head.next == null)
             return new TreeNode(head.val);
-        ListNode cur1 = head, cur2 = head;
+        ListNode cur1 = head;
+        ListNode cur2 = head;
         while(cur2.next.next != null && cur2.next.next.next != null) {
             cur1 = cur1.next;
             cur2 = cur2.next.next;
         }
         TreeNode root = new TreeNode(cur1.next.val);
         root.right = sortedListToBST(cur1.next.next);
-        if(cur1.next != null) {
-            cur1.next = null;
-            root.left = sortedListToBST(head);
-        }
+        cur1.next = null;
+        root.left = sortedListToBST(head);
         return root;
     }
 }
