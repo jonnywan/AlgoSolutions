@@ -40,17 +40,17 @@ public class P107 {
      */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-		int n = in.nextInt();
-		StringBuilder sb = null;
-		if(n < 9)
-			sb = new StringBuilder("0");
-		else if(n == 9)
-			sb = new StringBuilder("8");
-		else {
-			sb = new StringBuilder("72");
-			for(int i = 0; i < n - 10; i++)
-				sb.append("0");
-		}
+        int n = in.nextInt();
+        StringBuilder sb = null;
+        if(n < 9)
+            sb = new StringBuilder("0");
+        else if(n == 9)
+            sb = new StringBuilder("8");
+        else {
+            sb = new StringBuilder("72");
+            for(int i = 0; i < n - 10; i++) 
+                sb.append("0");
+        }
         System.out.println(sb);
     }
 }
