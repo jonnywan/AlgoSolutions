@@ -10,31 +10,47 @@
 
  * Note: The sequence of integers will be represented as a string.
  */
-package info.mitcc.leetcode;
 
 public class CountAndSay {
-	public String countAndSay(int n) {// need to be optimized!!!
-        // Start typing your Java solution below
-        // DO NOT write main() function
-		if(n == 1) 
-			return "1";
-		String output = "";
-        String str = this.countAndSay(n - 1);
-        int i = 0, j = 1;
-        int len = str.length();
-        while(j < len) {
-        	if(str.charAt(i) != str.charAt(j)) {
-        		output += (j - i) + "" + str.charAt(i);
-        		i = j;
-        		j++;
-        	} else {
-        		j++;
-        	}
+/***************************** updated 2014.01.10 ****************************/
+
+    public String countAndSay(int n) {
+        String res = "1";
+        for(int i = 2; i <= n; i++) {
+            int len = res.length();
+            int cnt = 1;
+            String temp = "";
+            for(int j = 1; j < len; j++) {
+                if(res.charAt(j) != res.charAt(j - 1)) {
+                    temp += "" + cnt + res.charAt(j - 1);
+                    cnt = 1;
+                } else {
+                    cnt++;
+                }
+            }
+            temp += "" + cnt + res.charAt(len - 1);
+            res = temp;
         }
-        output += (len - i) + "" + str.charAt(i);
-        return output;
+        return res;
     }
-	public static void main(String[] args) {
-		System.out.println(new CountAndSay().countAndSay(4));
-	}
+
+/*****************************************************************************/
+
+    public String countAndSay(int n) {
+        if(n == 1)
+            return "1";
+        String s = countAndSay(n - 1);
+        int cnt = 1;
+        String res = "";
+        for(int i = 1; i < s.length(); i++) {
+            if(s.charAt(i) != s.charAt(i - 1)) {
+                res += "" + cnt + s.charAt(i - 1);
+                cnt = 1;
+            } else {
+                cnt++;
+            }
+        }
+        res += "" + cnt + s.charAt(s.length() - 1);
+        return res;
+    }
 }
