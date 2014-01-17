@@ -11,7 +11,7 @@
  * return 10.
  */
 public class LargestRectangleInHistogram {
-/*  public int largestRectangleArea(int[] height) {// brute force, can not pass the Jadge Large.
+    public int largestRectangleArea(int[] height) {// brute force, can not pass the Jadge Large.
         int area = 0;
         for(int i = 0; i < height.length; i++) {
             int min = height[i];
@@ -21,7 +21,7 @@ public class LargestRectangleInHistogram {
             }
         }
         return area;
-    } */
+    } 
     
     public int largestRectangleArea(int[] height) {
         if(heigth.length == 0)
