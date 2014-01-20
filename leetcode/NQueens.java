@@ -29,43 +29,6 @@
 public class NQueens {
     public ArrayList<String[]> solveNQueens(int n) {
         ArrayList<String[]> res = new ArrayList<String[]>();
-        int[] row = new int[n];
-        int[] col = new int[n];
-        dfs(res, row, col, 0, n);
-        return res;
-    }
-
-    public void dfs(ArrayList<String[]> res, int[] row, int[] col, int r, int n) {
-        if(r == n) {
-            String[] s = new String[n];
-            for(int i = 0; i < n; i++) {
-                s[i] = "";
-                for(int j = 0; j < n; j++) 
-                    s[i] += (j != row[i]) ? "." : "Q";
-            }
-            res.add(s);
-        }
-        for(int i = 0; i < n; i++) {
-            int j = 0;
-            while(j < r) {
-                if(Math.abs(r - j) == Math.abs(i - row[j])) 
-                    break;
-                j++;
-            }
-            if(col[i] == 0 && j == r) {
-                row[r] = i;
-                col[i] = 1;
-                dfs(res, row, col, r + 1, n);
-                row[r] = 0;
-                col[i] = 0;
-            }
-        }
-    }
-
-/****************************** updated 2014.01.20 ***************************/
-
-    public ArrayList<String[]> solveNQueens(int n) {
-        ArrayList<String[]> res = new ArrayList<String[]>();
         int[] board = new int[n];
         placeQueenOnBoard(res, 0, board);
         return res;
@@ -86,7 +49,7 @@ public class NQueens {
                 if(isSafePlace(row, col, board)) {
                     board[row] = col;
                     placeQueenOnBoard(res, row + 1, board);
-                    board[row] = -1;
+                    board[row] = 0;
                 }
             }
         }
