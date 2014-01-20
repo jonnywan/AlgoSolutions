@@ -16,22 +16,22 @@
  */
 public class CombinationSum {
     public ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-        ArrayList<Integer> subList = new ArrayList<Integer>();
         Arrays.sort(candidates);
-        combinationSumHelper(result, subList, candidates, target, 0, 0);
-        return result;
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        dfs(res, list, candidates, 0, 0, target);
+        return res;
     }
 
-    public void combinationSumHelper(ArrayList<ArrayList<Integer>> result, ArrayList<Integer> subList, 
-            int[] candidates, int target, int sum, int preIndex) {
-        if(sum == target) 
-            result.add(new ArrayList<Integer>(subList));
+    public void dfs(ArrayList<ArrayList<Integer>> res, ArrayList<Integer> list,
+            int[] num, int pos, int sum, int target) {
+        if(sum == target)
+            res.add(new ArrayList<Integer>(list));
         if(sum < target) {
-            for(int i = preIndex; i < candidates.length; i++) {
-                subList.add(candidates[i]);
-                combinationSumHelper(result, subList, candidates, target, sum + candidates[i], i);
-                subList.remove(subList.size() - 1);
+            for(int i = pos; i < num.length; i++) {
+                list.add(num[i]);
+                dfs(res, list, num, i, sum + num[i], target);
+                list.remove(list.size() - 1);
             }
         }
     }
