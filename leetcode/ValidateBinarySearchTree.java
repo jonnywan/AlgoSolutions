@@ -3,12 +3,16 @@
 
  * Assume a BST is defined as follows:
 
- * The left subtree of a node contains only nodes with keys less than the node's key.
- * The right subtree of a node contains only nodes with keys greater than the node's key.
+ * The left subtree of a node contains only nodes with keys less than the node's 
+ * key.
+ * The right subtree of a node contains only nodes with keys greater than the 
+ * node's key.
  * Both the left and right subtrees must also be binary search trees.
+ * 
 
  * OJ's Binary Tree Serialization:
- * The serialization of a binary tree follows a level order traversal, where '#' signifies 
+ * The serialization of a binary tree follows a level order traversal, where '#' 
+ * signifies 
  * a path terminator where no node exists below.
 
  * Here's an example:
@@ -39,11 +43,14 @@ public class ValidateBinarySearchTree {
     public boolean isValidBSTHelper(TreeNode root, int min, int max) {
         if(root == null)
             return true;
-        return root.val > min && root.val < max && isValidBSTHelper(root.left, min, root.val) 
-            && isValidBSTHelper(root.right, root.val, max);
+        return root.val > min && root.val < max && 
+            isValidBSTHelper(root.left, min, root.val) && 
+            isValidBSTHelper(root.right, root.val, max);
     }
 
-/*  public boolean isValidBST(TreeNode root) {
+/*****************************************************************************/
+
+    public boolean isValidBST(TreeNode root) {
         if(root == null)
             return true;
         if(root.left != null) {
@@ -67,5 +74,31 @@ public class ValidateBinarySearchTree {
             }
         }
         return isValidBST(root.left) && isValidBST(root.right);
-    }*/
+    }
+
+/****************************** updated 2014.01.22 ***************************/
+
+    public boolean isValidBST(TreeNode root) {
+        if(root == null || root.left == null && root.right == null)
+            return true;
+        boolean isLeftValid = true;
+        boolean isRightValid = true;
+        if(root.left != null) {
+            TreeNode curLeftMax = root.left;
+            while(curLeftMax.right != null) {
+                curLeftMax = curLeftMax.right;
+            }
+            isLeftValid = root.val > root.left.val && root.val > curLeftMax.val 
+                && isValidBST(root.left);
+        }
+        if(root.right != null) {
+            TreeNode curRightMin = root.right;
+            while(curRightMin.left != null) {
+                curRightMin = curRightMin.left;
+            }
+            isRightValid = root.val < root.right.val && root.val < curRightMin.val 
+                && isValidBST(root.right);
+        }
+        return isLeftValid && isRightValid;
+    }
 }
