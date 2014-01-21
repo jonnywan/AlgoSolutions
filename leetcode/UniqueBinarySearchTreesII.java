@@ -21,25 +21,25 @@
  */
 public class UniqueBinarySearchTreesII {
     public ArrayList<TreeNode> generateTrees(int n) {
-        return generateHelper(1, n);
+        return generate(1, n);
     }
         
-    public ArrayList<TreeNode> generateHelper(int start, int end) {
-        ArrayList<TreeNode> list = new ArrayList<TreeNode>();
+    public ArrayList<TreeNode> generate(int start, int end) {
+        ArrayList<TreeNode> res = new ArrayList<TreeNode>();
         if(start > end) 
-            list.add(null);
+            res.add(null);
         for(int i = start; i <= end; i++) {
-            ArrayList<TreeNode> left = generateHelper(start, i - 1);
-            ArrayList<TreeNode> right = generateHelper(i + 1, end);
-            for(int j = 0; j < left.size(); j++) {
-                for(int k = 0; k < right.size(); k++) {
+            ArrayList<TreeNode> leftChildren = generate(start, i - 1);
+            ArrayList<TreeNode> rightChildren = generate(i + 1, end);
+            for(TreeNode leftChild : leftChildren) {
+                for(TreeNode rightChild : rightChildren) {
                     TreeNode root = new TreeNode(i);
-                    root.left = left.get(j);
-                    root.right = right.get(k);
-                    list.add(root);
+                    root.left = leftChild;
+                    root.right = rightChild;
+                    res.add(root);
                 }
             }
         }
-        return list;
+        return res;
     }
 }
