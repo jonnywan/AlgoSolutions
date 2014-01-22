@@ -21,25 +21,24 @@ public class ReverseNodesInKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
         if(head == null || head.next == null)
             return head;
-        ListNode cur1 = head;
-        ListNode cur2 = head.next;
-        int cnt = 1;
-        while(cnt < k && cur2 != null) {
-            cur1 = cur1.next;
-            cur2 = cur2.next;
-            cnt++;
+        ListNode cur = head;
+        for(int i = 1; i < k; i++) {
+            if(cur.next != null)
+                cur = cur.next;
+            else
+                return head;
         }
-        if(cnt < k)
-            return head;
-        cur1.next = null;
+        ListNode toBeProcess = cur.next;
+        cur.next = null;
         head = reverse(head);
-        cur1 = head;
-        while(cur1.next != null) {
-            cur1 = cur1.next;
+        cur = head;
+        while(cur.next != null) {
+            cur = cur.next;
         }
-        cur1.next = reverseKGroup(cur2, k);
+        cur.next = reverseKGroup(toBeProcess, k);
         return head;
     }
+
 
     public ListNode reverse(ListNode head) {
         if(head == null || head.next == null)
