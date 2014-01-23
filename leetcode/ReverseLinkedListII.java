@@ -22,7 +22,7 @@
  * }
  */
 public class ReverseLinkedListII {
-/*  public ListNode reverseBetween(ListNode head, int m, int n) {
+    public ListNode reverseBetween(ListNode head, int m, int n) {
         for(int i = 0; i <= (n - m) / 2; i++) {
             int curM = m + i;
             int curN = n - i;
@@ -42,6 +42,8 @@ public class ReverseLinkedListII {
         }
         return head;
     }
+
+/*****************************************************************************/
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if(head == null)
@@ -63,7 +65,9 @@ public class ReverseLinkedListII {
         }
         return head;
     }
-*/
+
+/*****************************************************************************/
+
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if(m == n)
             return head;
