@@ -18,7 +18,7 @@
  */
 public class RotateList {
     public ListNode rotateRight(ListNode head, int n) {
-        if(head == null || n == 0)
+        if(head == null)
             return head;
         int len = 1;
         ListNode cur = head;
@@ -27,10 +27,10 @@ public class RotateList {
             len++;
         }
         cur.next = head;
-        int toRunSteps = 0;
-        while(toRunSteps < len - n % len) {
+        int toRunSteps = len - n % len;
+        while(toRunSteps > 0) {
             cur = cur.next;
-            toRunSteps++;
+            toRunSteps--;
         }
         head = cur.next;
         cur.next = null;
