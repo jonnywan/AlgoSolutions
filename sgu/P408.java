@@ -29,7 +29,7 @@ Input
 Input contains single integer number N (0 ¡Ü N ¡Ü 1000). 
 Output
 Output the maximal score that Petya can gain. Your answer must be accurate up 
-to 10-3. 
+to 10^-3. 
 Example(s)
 sample input     sample output
 2                5.000
