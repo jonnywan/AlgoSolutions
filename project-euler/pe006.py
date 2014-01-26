@@ -15,7 +15,8 @@ def sum1(start, end):
     return total
 
 def sum2(start, end):
-    return end * end * (end + 1) * (end + 1) // 4 - start * start * (start - 1) * (start - 1) // 4
+    return end * end * (end + 1) * (end + 1) // 4 - \
+           start * start * (start - 1) * (start - 1) // 4
 
 def sum_square_diff_1(start, end):
     return sum2(start, end) - sum1(start, end)
