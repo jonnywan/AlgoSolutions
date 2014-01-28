@@ -26,7 +26,8 @@ __author__ = 'SUN'
 if __name__ == '__main__':
     i = 1
     tria = 0
-    while True:
+    cnt = 2
+    while cnt <= 500:
         tria += i
         i += 1
         cnt = 2
@@ -35,6 +36,4 @@ if __name__ == '__main__':
                 cnt += 2
         if int(tria ** 0.5) ** 2 == tria:
             cnt -= 1
-        if cnt > 500:
-            print(tria)
-            break
+    print(tria)
