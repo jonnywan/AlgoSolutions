@@ -40,11 +40,11 @@ def reverse(n):
 
 def is_lychrel(n):
     step = 1
+    n += reverse(n)
     while step <= 50 and n != reverse(n):
         step += 1
         n += reverse(n)
-    return step >= 50
-
+    return step > 50
 
 if __name__ == '__main__':
     cnt = 0
