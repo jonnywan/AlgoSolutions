@@ -40,11 +40,10 @@ def next_number(n):
     return factorial_sum
 
 def chain_len(n):
-    chain = [n]
-    nxt = next_number(n)
-    while not chain.__contains__(nxt):
-        chain.append(nxt)
-        nxt = next_number(nxt)
+    chain = []
+    while not chain.__contains__(n):
+        chain.append(n)
+        n = next_number(n)
     return len(chain)
 
 
