@@ -46,7 +46,6 @@ def chain_len(n):
         n = next_number(n)
     return len(chain)
 
-
 if __name__ == '__main__':
     res = 0
     for i in range(1000000):
