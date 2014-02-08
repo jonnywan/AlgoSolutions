@@ -32,4 +32,28 @@ __author__ = 'SUN'
 
 factorial = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880]
 
+def next_number(n):
+    res = 0
+    while n != 0:
+        res += factorial[n % 10]
+        n //= 10
+    return res
+
 if __name__ == '__main__':
+    chains = [0] * 1000000
+    res = 0
+    for i in range(1000000):
+        if chains[i] == 0:
+            chain = []
+            cnt = 0
+            nxt = next_number(i)
+            while nxt != i:
+                cnt += 1
+                chain.append(nxt)
+                nxt = next_number(nxt)
+            if cnt == 60:
+                res += len(chain)
+            if len(chain) > 0:
+                for j in chain:
+                    chains[j] = cnt
+    print(res)
