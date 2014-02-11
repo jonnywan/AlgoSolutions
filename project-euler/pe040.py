@@ -13,7 +13,6 @@ following expression.
 
 d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000
 '''
-
 __author__ = 'SUN'
 
 if __name__ == '__main__':

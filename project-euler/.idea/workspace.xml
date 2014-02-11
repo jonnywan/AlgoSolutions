@@ -26,7 +26,7 @@
       <file leaf-file-name="pe040.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pe040.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="88" selection-start="633" selection-end="633" vertical-scroll-proportion="0.7373272" vertical-offset="136" max-vertical-offset="570">
+            <state line="15" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.46568626" vertical-offset="0" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
@@ -93,6 +93,17 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -113,27 +124,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -373,12 +373,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Python.pe007" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pe047" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pe078" />
-      <item index="3" class="java.lang.String" itemvalue="Python.pe179" />
-      <item index="4" class="java.lang.String" itemvalue="Python.pe074" />
-      <item index="5" class="java.lang.String" itemvalue="Python.pe040" />
+      <item index="0" class="java.lang.String" itemvalue="Python.pe047" />
+      <item index="1" class="java.lang.String" itemvalue="Python.pe078" />
+      <item index="2" class="java.lang.String" itemvalue="Python.pe179" />
+      <item index="3" class="java.lang.String" itemvalue="Python.pe074" />
+      <item index="4" class="java.lang.String" itemvalue="Python.pe040" />
+      <item index="5" class="java.lang.String" itemvalue="Python.pe007" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -428,7 +428,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39811912" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25326797" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27899686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27899686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -504,49 +504,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pe074.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.627451" vertical-offset="509" max-vertical-offset="1121">
-          <folding />
-        </state>
+        <state line="47" column="0" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.627451" vertical-offset="509" max-vertical-offset="1121" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pe179.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="571" selection-end="571" vertical-scroll-proportion="0.62091506" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="20" column="28" selection-start="571" selection-end="571" vertical-scroll-proportion="0.62091506" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pe085.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="370" selection-end="370" vertical-scroll-proportion="0.37254903" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="12" column="25" selection-start="370" selection-end="370" vertical-scroll-proportion="0.37254903" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pe047.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="798">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="798" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pe019.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="233" selection-end="233" vertical-scroll-proportion="0.068627454" vertical-offset="110" max-vertical-offset="722">
-          <folding />
-        </state>
+        <state line="8" column="34" selection-start="233" selection-end="233" vertical-scroll-proportion="0.068627454" vertical-offset="110" max-vertical-offset="722" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pe122.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="182" selection-end="182" vertical-scroll-proportion="0.27941176" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="9" column="19" selection-start="182" selection-end="182" vertical-scroll-proportion="0.27941176" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pe040.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="88" selection-start="633" selection-end="633" vertical-scroll-proportion="0.7373272" vertical-offset="136" max-vertical-offset="570">
+        <state line="15" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.46568626" vertical-offset="0" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
