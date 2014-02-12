@@ -23,29 +23,27 @@ one million.
 
 __author__ = 'SUN'
 
-def divisor_sum(n):
-    s = 1
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            s += i + n // i
-    if int(n ** 0.5) ** 2 == n:
-        s -= int(n ** 0.5)
-    return s
-
-def chain(n):
-    chains = []
-    while not chains.__contains__(n):
-        chains.append(n)
-        n = divisor_sum(n)
-        if n > 1000000:
-            break
-    return chains
-
 if __name__ == '__main__':
-    array = []
-    for i in range(1000000):
+    n = 1000000
+    sum_divisor = [1] * (n + 1)
+    for i in range(2, n // 2 + 1):
+        j = 2 * i
+        while j < n:
+            sum_divisor[j] += i
+            j += i
+
+    res = []
+    for i in range(n):
         print(i)
-        ch = chain(i)
-        if len(array) < len(ch):
-            array = ch
-            print('array[0] = ', array[0])
+        chain = []
+        while i <= n and not chain.__contains__(i):
+            chain.append(i)
+            i = sum_divisor[i]
+        if sum_divisor[i] == chain[0] and len(res) < len(chain):
+            res = chain
+        #if chain[len(chain) - 1] != 1 and (len(res) < len(chain) - chain.index(i)):
+        #    res = chain[chain.index(i):len(chain)]
+    print(res)
+    print('len(res) = ', len(res))
+    print('min(res) = ', min(res))
+
