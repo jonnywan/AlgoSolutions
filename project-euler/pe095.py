@@ -34,16 +34,10 @@ if __name__ == '__main__':
 
     res = []
     for i in range(n):
-        print(i)
         chain = []
         while i <= n and not chain.__contains__(i):
             chain.append(i)
             i = sum_divisor[i]
-        if sum_divisor[i] == chain[0] and len(res) < len(chain):
+        if i <= n and i == chain[0] and len(res) < len(chain):
             res = chain
-        #if chain[len(chain) - 1] != 1 and (len(res) < len(chain) - chain.index(i)):
-        #    res = chain[chain.index(i):len(chain)]
-    print(res)
-    print('len(res) = ', len(res))
-    print('min(res) = ', min(res))
-
+    print(min(res))
