@@ -19,3 +19,25 @@ reach 21780 the proportion of bouncy numbers is equal to 90%.
 Find the least number for which the proportion of bouncy numbers is exactly 99%.
 '''
 __author__ = 'SUN'
+
+def is_bouncy(n):
+    is_increase = True
+    is_decrease = True
+    while n >= 10:
+        if is_increase and n % 10 < (n // 10 % 10):
+            is_increase = False
+        if is_decrease and n % 10 > (n // 10 % 10):
+            is_decrease = False
+        n //= 10
+    return not is_increase and not is_decrease
+
+if __name__ == '__main__':
+    cnt = 0
+    i = 1
+    while True:
+        if is_bouncy(i):
+            cnt += 1
+        if 99 * i == 100 * cnt:
+            break
+        i += 1
+    print(i)
