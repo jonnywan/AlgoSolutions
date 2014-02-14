@@ -16,3 +16,17 @@ How many, not necessarily distinct, values of  nCr, for 1 ≤ n ≤ 100, are gre
 than one-million?
 '''
 __author__ = 'SUN'
+
+def combination(n, r):
+    c = 1
+    for i in range(1, r + 1):
+        c = c * (n + 1 - i) // i
+    return c
+
+if __name__ == '__main__':
+    cnt = 0
+    for n in range(1, 101):
+        for r in range(0, n + 1):
+            if combination(n, r) > 1000000:
+                cnt += 1
+    print(cnt)
