@@ -26,7 +26,9 @@ def combination(n, r):
 if __name__ == '__main__':
     cnt = 0
     for n in range(1, 101):
-        for r in range(0, n + 1):
-            if combination(n, r) > 1000000:
-                cnt += 1
+        if combination(n, n // 2) > 1000000:
+            r = n // 2
+            while combination(n, r) > 1000000:
+                r -= 1
+            cnt += n - 2 * r - 1
     print(cnt)
