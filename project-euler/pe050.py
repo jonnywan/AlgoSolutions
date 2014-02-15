@@ -25,7 +25,6 @@ if __name__ == '__main__':
         for j in range(i * i, N, i):
             prime[j] = False
 
-    # collect the prime number
     pp = []
     for i in range(N):
         if prime[i]:
