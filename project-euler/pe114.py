@@ -19,12 +19,15 @@ eight units in length you could use red (3), black (1), and red (4).
 __date__ = '14-2-16'
 __author__ = 'SUN'
 
+def f(m, n):
+    ways = [0] * (n + 1)
+    for i in range(m):
+        ways[i] = 1
+    for i in range(m,n + 1):
+        ways[i] += ways[i - 1] + 1
+        for j in range(m, i):
+            ways[i] += ways[i - j - 1]
+    return ways[n]
+
 if __name__ == '__main__':
-    N = 50
-    c = [0] * (N + 1)
-    c[0] = c[1] = c[2] = 1
-    for i in range(3, N + 1):
-        c[i] += c[i - 1] + 1
-        for j in range(3, i):
-            c[i] += c[i - j - 1]
-    print(c[N])
+    print(f(3, 50))
