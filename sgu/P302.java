@@ -44,15 +44,19 @@ public class P302 {
             } else if (s.charAt(i) == '<' && s.charAt(i + 1) == 'D') {
                 stack.push('D');
                 i += 5;
-            } else if (s.charAt(i) == '<' && s.charAt(i + 1) == '/' && s.charAt(i + 2) == 'U') {
+            } else if (s.charAt(i) == '<' && s.charAt(i + 1) == '/' 
+                    && s.charAt(i + 2) == 'U') {
                 stack.pop();
                 i += 4;
-            } else if (s.charAt(i) == '<' && s.charAt(i + 1) == '/' && s.charAt(i + 2) == 'D') {
+            } else if (s.charAt(i) == '<' && s.charAt(i + 1) == '/' 
+                    && s.charAt(i + 2) == 'D') {
                 stack.pop();
                 i += 6;
-            } else if (!stack.isEmpty() && stack.peek() == 'U' && s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
+            } else if (!stack.isEmpty() && stack.peek() == 'U' 
+                    && s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
                 res += (char) (s.charAt(i) - 32);
-            } else if (!stack.isEmpty() && stack.peek() == 'D' && s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
+            } else if (!stack.isEmpty() && stack.peek() == 'D' 
+                    && s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
                 res += (char) (s.charAt(i) + 32);
             } else {
                 res += s.charAt(i);
