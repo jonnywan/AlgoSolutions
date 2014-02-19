@@ -13,10 +13,11 @@ How many different ways can £2 be made using any number of coins?
 __author__ = 'SUN'
 
 if __name__ == '__main__':
+    N = 200
     coins = [1, 2, 5, 10, 20, 50, 100, 200]
-    ways = [0] * 201
+    ways = [0] * (N + 1)
     ways[0] = 1
     for i in range(len(coins)):
-        for j in range(coins[i], 201):
+        for j in range(coins[i], N + 1):
             ways[j] += ways[j - coins[i]]
-    print(ways[200])
+    print(ways[N])
