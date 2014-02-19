@@ -13,6 +13,8 @@ letters. The use of "and" when writing out numbers is in compliance with British
 usage.
 '''
 
+__date__ = '14-2-18'
+__author__ = 'SUN'
 
 def letter_count(n):
     units = [3, 3, 5, 4, 4, 3, 5, 5, 4]
