@@ -41,4 +41,3 @@ if __name__ == '__main__':
             if prime[2 * pp[j] - pp[i]] and number_array(pp[i]) == \
                     number_array(pp[j]) == number_array(2 * pp[j] - pp[i]):
                 print(pp[i], pp[j], 2 * pp[j] - pp[i])
-                print(pp[j] - pp[i])
