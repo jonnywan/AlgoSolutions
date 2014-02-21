@@ -77,22 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pe049.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pe049.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pe049.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="31" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="912">
-              <folding>
-                <marker date="1392892593609" expanded="true" signature="0:502" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-                <marker date="1392892593609" expanded="true" signature="565:670" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pe457.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pe457.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="31" selection-start="667" selection-end="667" vertical-scroll-proportion="0.5777778" vertical-offset="253" max-vertical-offset="760">
+            <state line="30" column="31" selection-start="903" selection-end="903" vertical-scroll-proportion="0.6447964" vertical-offset="285" max-vertical-offset="912">
               <folding />
             </state>
           </provider>
@@ -293,7 +281,9 @@
       <module name="project-euler" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pe457.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -541,17 +531,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2203514" sideWeight="0.7777778" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1669107" sideWeight="0.7647059" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42156863" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25326797" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22222222" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23529412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -576,7 +566,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="18" />
+      <option name="time" value="20" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -592,11 +582,6 @@
         <state line="28" column="37" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="722">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.88414633" vertical-offset="394" max-vertical-offset="798" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pe053.py">
@@ -662,19 +647,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pe049.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="31" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="912">
-          <folding>
-            <marker date="1392892593609" expanded="true" signature="0:502" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-            <marker date="1392892593609" expanded="true" signature="565:670" placeholder="..." />
-          </folding>
+        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.88414633" vertical-offset="394" max-vertical-offset="798">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pe457.py">
+    <entry file="file://$PROJECT_DIR$/pe049.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="31" selection-start="667" selection-end="667" vertical-scroll-proportion="0.5777778" vertical-offset="253" max-vertical-offset="760">
+        <state line="30" column="31" selection-start="903" selection-end="903" vertical-scroll-proportion="0.6447964" vertical-offset="285" max-vertical-offset="912">
           <folding />
         </state>
       </provider>
