@@ -12,6 +12,7 @@ Let SIGMA2 represent the summatory function of sigma2, that is SIGMA2(n)=
 The first 6 values of SIGMA2 are: 1,6,16,37,63 and 113.
 Find SIGMA2(10^15) modulo 10^9.
 '''
+
 __date__ = '14-2-21'
 __author__ = 'SUN'
 
@@ -22,15 +23,14 @@ def pyramidal(n):
 
 if __name__ == '__main__':
     start = time.clock()
-    N = 10000000
+    N = 10 ** 15
     res = 0
     i = 1
     while i <= N:
-        cur = N // i
-        repeat = N // cur - i + 1
-        print("i = ", i, "cur = ", cur, "repeat = ", repeat)
-        res = (res + repeat * pyramidal(cur)) % 10 ** 9
+        divisor = N // i
+        repeat = N // divisor - i + 1
+        res = (res + repeat * pyramidal(divisor)) % 10 ** 9
         i += repeat
-    print(res % 10 ** 9)
+    print(res)
 
     print(time.clock() - start)
