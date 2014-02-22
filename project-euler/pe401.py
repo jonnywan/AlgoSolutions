@@ -32,5 +32,4 @@ if __name__ == '__main__':
         res = (res + repeat * pyramidal(divisor)) % 10 ** 9
         i += repeat
     print(res)
-
     print(time.clock() - start)
