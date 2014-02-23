@@ -23,25 +23,30 @@ __author__ = 'SUN'
 
 import time
 
-def collatz_length(n):
-    cnt = 1
-    while n != 1:
-        if n % 2 == 0:
-            n //= 2
-        else:
-            n = 3 * n + 1
-        cnt += 1
+cache = [0] * 1000000
+
+def collatz(n):
+    if n == 1:
+        return 1
+    if n < len(cache) and cache[n] > 0:
+        return cache[n]
+    if n & 1 == 0:
+        cnt = 1 + collatz(n >> 1)
+    else:
+        cnt = 2 + collatz((3 * n + 1) >> 1)
+    if n < len(cache):
+        cache[n] = cnt
     return cnt
 
 if __name__ == '__main__':
     start = time.clock()
     res = 0
-    max_count = 0
+    max_length = 0
     for i in range(1, 1000000):
-        c = collatz_length(i)
-        if max_count < c:
-            max_count = c
+        collatz(i)
+    for i in range(1, 1000000):
+        if max_length < collatz(i):
+            max_length = collatz(i)
             res = i
     print(res)
-
-    print('Runtime is', time.clock() - start)
+    print("Runtime is", time.clock() - start, 'seconds')
