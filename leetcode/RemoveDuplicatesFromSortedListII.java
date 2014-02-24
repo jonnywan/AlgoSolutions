@@ -18,6 +18,7 @@
  * }
  */
 public class RemoveDuplicatesFromSortedListII {
+
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -33,5 +34,22 @@ public class RemoveDuplicatesFromSortedListII {
                 cur1 = cur1.next;
         }
         return dummy.next;
+    }
+
+/**************************** 2014.02.24 *************************************/
+
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null || head.next == null) 
+            return head;
+        ListNode cur1 = head;
+        ListNode cur2 = head.next;
+        if (cur1.val != cur2.val) {
+            cur1.next = deleteDuplicates(cur2);
+            return head;
+        } else {
+            while (cur2 != null && cur1.val == cur2.val)
+                cur2 = cur2.next;
+            return deleteDuplicates(cur2);
+        }
     }
 }
