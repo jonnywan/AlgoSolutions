@@ -1,3 +1,11 @@
+/*
+Follow up for N-Queens problem.
+
+Now, instead outputting board configurations, return the total number of 
+distinct solutions.
+ * 
+ */
+
 public class NQueensII {
     int res = 0;
     public int totalNQueens(int n) {
