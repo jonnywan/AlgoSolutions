@@ -2,7 +2,8 @@
  * Given a number represented as an array of digits, plus one to the number.
  */
 public class PlusOne {
-	public int[] plusOne(int[] digits) {
+
+    public int[] plusOne(int[] digits) {
         int len = digits.length;
         int carrier = 1;
         int i = len - 1;
