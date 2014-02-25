@@ -18,31 +18,29 @@ outputs are in the right-hand column.
 public class NextPermutation {
 
     public void nextPermutation(int[] num) {
-        int i = num.length - 2;
-        for (; i >= 0; i--) {
-            if (num[i] < num[i + 1]) 
-                break;
-        }
-        if (i < 0) {
-            for (i = 0; i < num.length / 2; i++) {
-                int temp = num[i];
-                num[i] = num[num.length - 1 - i];
-                num[num.length - 1 - i] = temp;
-            }
-        } else {
-            int j = num.length - 1;
-            for (; j > i; j--) {
-                if (num[j] > num[i]) 
-                    break;
-            }
-            int temp = num[i];
-            num[i] = num[j];
-            num[j] = temp;
-            for (j = i + 1; j < (i + 1 + num.length) / 2; j++) {
-                temp = num[j];
-                num[j] = num[num.length + i - j];
-                num[num.length + i - j] = temp;
+        for (int i = num.length - 2; i >= 0; i--) {
+            if (num[i] < num[i + 1]) {
+                for (int j = num.length - 1; j > i; j--) {
+                    if (num[j] > num[i]) {
+                        swap(num, i, j);
+                        reverse(num, i + 1, num.length - 1);
+                        return ;
+                    }
+                }
             }
         }
+        reverse(num, 0, num.length - 1);
     }
+
+    public void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    
+    public void reverse(int[] array, int start, int end) {
+        for (int i = start; i <= (start + end) / 2; i++)
+            swap(array, i, start + end - i);
+    }
+
 }
