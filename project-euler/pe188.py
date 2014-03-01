@@ -16,16 +16,25 @@ Find the last 8 digits of 1777↑↑1855.
 __date__ = '14-3-1'
 __author__ = 'SUN'
 
-def exp_mod(a, x, mod):
+def pow_mod_recursive(a, x, mod):
     if x == 0 or x == 1:
         return a ** x % mod
     elif x % 2 == 0:
-        return exp_mod(a, x // 2, mod) ** 2 % mod
+        return pow_mod_recursive(a, x // 2, mod) ** 2 % mod
     else:
-        return a * exp_mod(a, x // 2, mod) ** 2 % mod
+        return a * pow_mod_recursive(a, x // 2, mod) ** 2 % mod
+
+def pow_mod(a, x, mod):
+    pow_value = 1
+    while x > 0:
+        if x & 1 == 1:
+            pow_value = pow_value * a % mod
+        a = a ** 2 % mod
+        x >>= 1
+    return pow_value
 
 if __name__ == '__main__':
     res = 1
     for i in range(1855):
-        res = exp_mod(1777, res, 10 ** 8)
+        res = pow_mod(1777, res, 10 ** 8)
     print(res)
