@@ -21,6 +21,9 @@ Find ∑ z(n) for 0<n<10^17.
 __date__ = '14-3-4'
 __author__ = 'SUN'
 
+f = [0, 1, 2]
+sum_z = [0, 0, 1]
+
 def sigma_z(n):
     if n <= 3:
         return sum_z[n]
@@ -29,9 +32,6 @@ def sigma_z(n):
         while f[i + 1] <= n:
             i += 1
         return sum_z[i] + sigma_z(n - f[i]) + n - f[i]
-
-f = [0, 1, 2]
-sum_z = [0, 0, 1]
 
 if __name__ == '__main__':
     N = 10 ** 18
