@@ -40,5 +40,5 @@ def dfs(circle, sub_list, n):
 if __name__ == '__main__':
     array = []
     dfs(array, ['00000'], 5)
-    res = sum([int(s, 2) for s in array])
+    res = sum(int(s, 2) for s in array)
     print(res)
