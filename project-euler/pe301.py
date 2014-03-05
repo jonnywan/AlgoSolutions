@@ -42,20 +42,15 @@ def combination(m, n):
 
 if __name__ == '__main__':
     start = time.clock()
+
     #res = 0
-    #for i in range(1, 2 ** 30 + 1):
-    #    if i ^ (2 * i) ^ (3 * i) == 0:
-    #        res += 1
+    #for i in range(16):
+    #    res += combination(i, 31 - i)
     #print(res)
 
-    res = 0
-    for i in range(17):
-        res += combination(i, 31 - i)
-    print(res)
-
-    a, b = 1, 1
-    for i in range(30):
+    a, b = 0, 1
+    for i in range(31):
         a, b = b, a + b
-        print(b)
+    print(b)
 
     print('Runtime is ', time.clock() - start)
