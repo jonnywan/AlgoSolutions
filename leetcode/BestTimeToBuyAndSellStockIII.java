@@ -1,43 +1,38 @@
 /*
- * Say you have an array for which the ith element is the price of a given stock on day i.
+ * Say you have an array for which the ith element is the price of a given stock 
+ * on day i.
 
- * Design an algorithm to find the maximum profit. You may complete at most two transactions.
+ * Design an algorithm to find the maximum profit. You may complete at most two 
+ * transactions.
 
  * Note:
- * You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again). 
+ * You may not engage in multiple transactions at the same time (ie, you must 
+ * sell the stock before you buy again). 
  */
 package info.mitcc.leetcode;
 
 public class BestTimeToBuyAndSellStockIII {
-	public int maxProfit(int[] prices) {
-		if(prices.length == 0)
-			return 0;
-		int[] leftMax = new int[prices.length];
-		int[] rightMax = new int[prices.length];
-		
-		int min = prices[0];
-		leftMax[0] = 0;
-		for(int i = 1; i < prices.length; i++) {
-			min = Math.min(min, prices[i]);
-			leftMax[i] = Math.max(leftMax[i - 1], prices[i] - min);
-		}
-		
-		int max = prices[prices.length - 1];
-		rightMax[prices.length - 1] = 0;
-		for(int i = prices.length - 2; i >= 0; i--) {
-			max = Math.max(max, prices[i]);
-			rightMax[i] = Math.max(rightMax[i + 1], max - prices[i]);
-		}
-		
-		int result = 0;
-		for(int i = 0; i < prices.length; i++) {
-			result = Math.max(result, leftMax[i] + rightMax[i]);
-		}
-		return result;
-	}
-	
-	public static void main(String[] args) {
-		int[] test = {1, 2, 0, 1};
-		System.out.println(new BestTimeToBuyAndSellStockIII().maxProfit(test));
-	}
+
+/**************************** updated 2014.03.08 *****************************/
+
+    public int maxProfit(int[] prices) {
+        if (prices.length <= 1)
+            return 0;
+        int len = prices.length;
+        int[] leftMax = new int[len];
+        int[] rightMax = new int[len];
+        int min = prices[0];
+        int max = prices[len - 1];
+        for (int i = 1; i < len; i++) {
+            leftMax[i] = Math.max(leftMax[i - 1], prices[i] - min);
+            min = Math.min(min, prices[i]);
+            rightMax[len - 1 - i] = Math.max(rightMax[len - i], 
+                    max - prices[len - 1 - i]);
+            max = Math.max(max, prices[len - 1 - i]);
+        }
+        int res = 0;
+        for (int i = 0; i < prices.length; i++) 
+            res = Math.max(res, leftMax[i] + rightMax[i]);
+        return res;
+    }    
 }
