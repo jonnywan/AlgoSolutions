@@ -33,4 +33,4 @@ if __name__ == '__main__':
         denominator = (triangles[2] - triangles[0]) * (triangles[5] - triangles[1]) - (triangles[4] - triangles[0]) * (triangles[3] - triangles[1])
         if nu / denominator > 0 and nv / denominator > 0 and (nu + nv) / denominator < 1:
             cnt += 1
-    print('cnt = ', cnt)
+    print(cnt)
