@@ -19,8 +19,7 @@ __author__ = 'SUN'
 if __name__ == '__main__':
     with open('pe022.txt') as f:
         data = f.readline()
-    names = [name.strip('"') for name in data.split(",")]
-    names = sorted(names)
+    names = sorted([name.strip('"') for name in data.split(",")])
     res = 0
     for i in range(len(names)):
         res += (i + 1) * sum(ord(names[i][j]) - ord('A') + 1
