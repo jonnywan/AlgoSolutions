@@ -15,20 +15,6 @@ What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5,
 __date__ = '14-3-11'
 __author__ = 'SUN'
 
-def get_permutation_1(array, k):
-    per = []
-    permutation(per, '', array)
-    return per[k]
-
-def permutation(per, s, array):
-    if len(array) == 0:
-        per.append(s)
-    else:
-        for i in range(len(array)):
-            permutation(per, s + str(array[i]), array[0:i] + array[i + 1: len(array)])
-
-###############################################################################
-
 def factor(n):
     f = 1
     for i in range(2, n + 1):
