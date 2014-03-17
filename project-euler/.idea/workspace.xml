@@ -62,7 +62,7 @@
       <file leaf-file-name="pe034.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pe034.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="12" selection-start="550" selection-end="551" vertical-scroll-proportion="0.50391644" vertical-offset="282" max-vertical-offset="741">
+            <state line="28" column="20" selection-start="695" selection-end="695" vertical-scroll-proportion="1.148825" vertical-offset="92" max-vertical-offset="703">
               <folding />
             </state>
           </provider>
@@ -594,11 +594,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pe301.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="3" selection-start="1325" selection-end="1326" vertical-scroll-proportion="0.33333334" vertical-offset="418" max-vertical-offset="1159" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pe297.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="8" selection-start="764" selection-end="764" vertical-scroll-proportion="1.0952381" vertical-offset="114" max-vertical-offset="874" />
@@ -677,9 +672,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pe074.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="-1.3315927" vertical-offset="738" max-vertical-offset="1121">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pe034.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="12" selection-start="550" selection-end="551" vertical-scroll-proportion="0.50391644" vertical-offset="282" max-vertical-offset="741">
+        <state line="28" column="20" selection-start="695" selection-end="695" vertical-scroll-proportion="1.148825" vertical-offset="92" max-vertical-offset="703">
           <folding />
         </state>
       </provider>
