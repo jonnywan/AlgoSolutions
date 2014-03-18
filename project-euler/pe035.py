@@ -14,7 +14,6 @@ __date__ = '14-3-18'
 __author__ = 'SUN'
 
 if __name__ == '__main__':
-
     N = 1000000
     num = [True] * N
     num[0] = num[1] = False
@@ -25,15 +24,14 @@ if __name__ == '__main__':
     cnt = 0
     for i in range(N):
         if num[i]:
-            s = str(num[i])
-            n = 0
-            for j in range(len(s) - 1):
-                s = s[1:] + s[0]
-                if num[int(s)]:
+            temp = i
+            n = 1
+            for j in range(len(str(i)) - 1):
+                temp = temp % (10 ** (len(str(i)) - 1)) * 10 + temp // (10 ** (len(str(i)) - 1))
+                if num[temp]:
                     n += 1
                 else:
                     break
-            if n == len(s) - 1:
-                print(i)
+            if n == len(str(i)):
                 cnt += 1
-    print('cnt = ', cnt)
+    print(cnt)
