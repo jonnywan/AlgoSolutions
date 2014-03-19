@@ -18,7 +18,5 @@ def is_palindrome(s):
 
 if __name__ == '__main__':
     res = 0
-    for i in range(1000000):
-        if is_palindrome(str(i)) and is_palindrome(bin(i)[2:]):
-            res += i
+    res += sum(i for i in range(1000000) if is_palindrome(str(i)) and is_palindrome(bin(i)[2:]))
     print(res)
