@@ -9,7 +9,6 @@
  * You may not engage in multiple transactions at the same time (ie, you must 
  * sell the stock before you buy again). 
  */
-package info.mitcc.leetcode;
 
 public class BestTimeToBuyAndSellStockIII {
 
