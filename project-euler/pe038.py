@@ -19,14 +19,6 @@ concatenated product of an integer with (1,2, ... , n) where n > 1?
 __date__ = '14-3-20'
 __author__ = 'SUN'
 
-def is_pandigital_multiples(n):
-    s = str(n)
-    i = 2
-    while len(s) < 9:
-        s += str(n * i)
-        i += 1
-    return sorted(list(s)) == ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-
 if __name__ == '__main__':
     res = 0
     for i in range(10000):
