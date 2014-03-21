@@ -35,7 +35,7 @@ def gcd(m, n):
 
 def project_euler(limit):
     triangle = [0] * (limit + 1)
-    for i in range(2, int((limit // 2) ** 0.5) + 1):
+    for i in range(2, int((limit // 2) ** 0.5)):
         for j in range(1, i):
             if (i + j) % 2 == 1 and gcd(i, j) == 1:
                 s = 2 * i * (i + j)

@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pe039.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pe039.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pe039.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="24" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.0" vertical-offset="656" max-vertical-offset="1026">
+            <state line="46" column="24" selection-start="1180" selection-end="1180" vertical-scroll-proportion="0.7432432" vertical-offset="599" max-vertical-offset="1026">
               <folding>
                 <element signature="e#280#291#0" expanded="true" />
               </folding>
@@ -34,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pe075.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pe075.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pe075.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="24" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.6918919" vertical-offset="618" max-vertical-offset="1026">
+            <state line="42" column="36" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0" vertical-offset="656" max-vertical-offset="1026">
               <folding />
             </state>
           </provider>
@@ -67,8 +67,8 @@
         <option value="$PROJECT_DIR$/pe037.py" />
         <option value="$PROJECT_DIR$/pe038.py" />
         <option value="$PROJECT_DIR$/pe271.py" />
-        <option value="$PROJECT_DIR$/pe039.py" />
         <option value="$PROJECT_DIR$/pe075.py" />
+        <option value="$PROJECT_DIR$/pe039.py" />
       </list>
     </option>
   </component>
@@ -156,7 +156,7 @@
       <recent name="F:\AlgoSolutions\project-euler" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pe075">
+  <component name="RunManager" selected="Python.pe039">
     <configuration default="false" name="pe075" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -687,19 +687,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pe039.py">
+    <entry file="file://$PROJECT_DIR$/pe075.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="24" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.0" vertical-offset="656" max-vertical-offset="1026">
-          <folding>
-            <element signature="e#280#291#0" expanded="true" />
-          </folding>
+        <state line="42" column="36" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0" vertical-offset="656" max-vertical-offset="1026">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pe075.py">
+    <entry file="file://$PROJECT_DIR$/pe039.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="24" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.6918919" vertical-offset="618" max-vertical-offset="1026">
-          <folding />
+        <state line="46" column="24" selection-start="1180" selection-end="1180" vertical-scroll-proportion="0.7432432" vertical-offset="599" max-vertical-offset="1026">
+          <folding>
+            <element signature="e#280#291#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

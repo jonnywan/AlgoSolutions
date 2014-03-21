@@ -35,7 +35,7 @@ def project_euler_1(limit):
 
 def project_euler_2(limit):
     t = [0] * (limit + 1)
-    for i in range(2, int((limit // 2) ** 0.5) + 1):
+    for i in range(2, int((limit // 2) ** 0.5)):
         for j in range(1, i):
             if (i + j) % 2 == 1 and gcd(i, j) == 1:
                 s = 2 * i * (i + j)
@@ -45,5 +45,5 @@ def project_euler_2(limit):
 
 if __name__ == '__main__':
     start = time.clock()
-    project_euler_1(1000)
+    project_euler_2(1000)
     print('Runtime is ', time.clock() - start)
