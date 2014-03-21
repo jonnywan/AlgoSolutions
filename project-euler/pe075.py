@@ -23,25 +23,27 @@ Given that L is the length of the wire, for how many values of L ≤ 1,500,000 c
 exactly one integer sided right angle triangle be formed?
 '''
 
+import time
+
 __date__ = '14-3-8'
 __author__ = 'SUN'
-
-import time
 
 def gcd(m, n):
     while n != 0:
         m, n = n, m % n
     return m
 
+def project_euler(limit):
+    triangle = [0] * (limit + 1)
+    for i in range(2, int((limit // 2) ** 0.5) + 1):
+        for j in range(1, i):
+            if (i + j) % 2 == 1 and gcd(i, j) == 1:
+                s = 2 * i * (i + j)
+                for x in range(s, limit + 1, s):
+                    triangle[x] += 1
+    print(triangle.count(1))
+
 if __name__ == '__main__':
     start = time.clock()
-    N = 1500000
-    triangle = [0] * (N + 1)
-    for i in range(1, int(N ** 0.5), 2):
-        for j in range(2, int(N ** 0.5) - i, 2):
-            if gcd(i, j) == 1:
-                s = abs(i ** 2 - j ** 2) + 2 * i * j + i ** 2 + j ** 2
-                for k in range(s, N + 1, s):
-                    triangle[k] += 1
-    print(triangle.count(1))
+    project_euler(1500000)
     print('Runtime is ', time.clock() - start)
