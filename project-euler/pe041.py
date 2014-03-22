@@ -7,10 +7,13 @@ also prime.
 
 What is the largest n-digit pandigital prime that exists?
 """
+import time
+
 __date__ = '14-3-22'
 __author__ = 'SUN'
 
 if __name__ == '__main__':
+    start = time.clock()
     N = 7654321
     prime = [True] * (N + 1)
     prime[0] = prime[1] = False
@@ -23,3 +26,4 @@ if __name__ == '__main__':
                                            or ['1', '2', '3', '4']):
             print(i)
             break
+    print('Runtime is ', time.clock() - start)
