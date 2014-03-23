@@ -20,3 +20,21 @@ __author__ = 'SUN'
 
 if __name__ == '__main__':
     f = open('pe042.txt')
+    words = f.read().split(',')
+    words = [word.strip('\"') for word in words]
+    f.close()
+
+    maxLen = max(len(word) for word in words)
+    maxValue = maxLen * (ord('Z') - ord('A') + 1)
+    triangle = []
+    i = 1
+    while i * (i + 1) // 2 <= maxValue:
+        triangle.append(i * (i + 1) // 2)
+        i += 1
+
+    cnt = 0
+    for word in words:
+        value = sum(ord(c) - ord('A') + 1 for c in word)
+        if value in triangle:
+            cnt += 1
+    print(cnt)
