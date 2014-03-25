@@ -18,25 +18,18 @@ import time
 __date__ = '14-3-25'
 __author__ = 'SUN'
 
-def is_pentagonal(n):
-    root = (1 + (1 + 24 * n) ** 0.5) / 6
-    return root == int(root)
+def project_euler():
+    pen = set()
+    i = 1
+    while True:
+        next_pen = i * (3 * i - 1) // 2
+        pen.add(next_pen)
+        i += 1
+        for p in pen:
+            if (next_pen - p) in pen and (next_pen - 2 * p) in pen:
+                return next_pen - 2 * p
 
 if __name__ == '__main__':
     start = time.clock()
-    pen = [1, 5]
-    i = 3
-    diff = 0
-    next_pen = i * (3 * i - 1) // 2
-    isInPen = False
-    while not isInPen:
-        for value in pen:
-            if (next_pen - value) in pen and is_pentagonal(next_pen + value):
-                isInPen = True
-                diff = next_pen - value
-                break
-        pen.append(next_pen)
-        i += 1
-        next_pen = i * (3 * i - 1) // 2
-    print(diff)
+    print(project_euler())
     print('Runtime is ', time.clock() - start)
