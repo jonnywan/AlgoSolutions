@@ -18,3 +18,25 @@ and twice a square?
 """
 __date__ = '14-3-27'
 __author__ = 'SUN'
+
+def is_prime(n):
+    if n == 0 or n == 1:
+        return False
+    if n % 2 == 0 or n % 3 == 0 or n % 5 == 0:
+        return n == 2 or n == 3 or n == 5
+    for i in range(7, int(n ** 0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+def is_go_other_con(n):
+    for i in range(int((n / 2) ** 0.5) + 1):
+        if is_prime(n - 2 * i * i):
+            return True
+    return False
+
+if __name__ == '__main__':
+    k = 9
+    while is_go_other_con(k):
+        k += 2
+    print(k)
