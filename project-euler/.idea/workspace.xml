@@ -80,7 +80,7 @@
       <file leaf-file-name="pe057.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pe057.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="57" selection-start="609" selection-end="609" vertical-scroll-proportion="0.39593908" vertical-offset="89" max-vertical-offset="703">
+            <state line="20" column="33" selection-start="722" selection-end="722" vertical-scroll-proportion="0.642978" vertical-offset="0" max-vertical-offset="703">
               <folding />
             </state>
           </provider>
@@ -147,6 +147,17 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -167,27 +178,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="fileTemplates" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="last_opened_file_path" value="F:/python/PyCharmTest" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -578,20 +578,20 @@
       <method />
     </configuration>
     <list size="14">
-      <item index="0" class="java.lang.String" itemvalue="Python.pe052" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pe045" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pe039" />
-      <item index="3" class="java.lang.String" itemvalue="Python.pe035" />
-      <item index="4" class="java.lang.String" itemvalue="Python.pe027" />
-      <item index="5" class="java.lang.String" itemvalue="Python.pe078" />
-      <item index="6" class="java.lang.String" itemvalue="Python.pe116" />
-      <item index="7" class="java.lang.String" itemvalue="Python.pe050" />
-      <item index="8" class="java.lang.String" itemvalue="Python.pe007" />
-      <item index="9" class="java.lang.String" itemvalue="Python.pe042" />
-      <item index="10" class="java.lang.String" itemvalue="Python.pe043" />
-      <item index="11" class="java.lang.String" itemvalue="Python.pe044" />
-      <item index="12" class="java.lang.String" itemvalue="Python.pe046" />
-      <item index="13" class="java.lang.String" itemvalue="Python.pe057" />
+      <item index="0" class="java.lang.String" itemvalue="Python.pe042" />
+      <item index="1" class="java.lang.String" itemvalue="Python.pe043" />
+      <item index="2" class="java.lang.String" itemvalue="Python.pe044" />
+      <item index="3" class="java.lang.String" itemvalue="Python.pe046" />
+      <item index="4" class="java.lang.String" itemvalue="Python.pe057" />
+      <item index="5" class="java.lang.String" itemvalue="Python.pe052" />
+      <item index="6" class="java.lang.String" itemvalue="Python.pe045" />
+      <item index="7" class="java.lang.String" itemvalue="Python.pe039" />
+      <item index="8" class="java.lang.String" itemvalue="Python.pe035" />
+      <item index="9" class="java.lang.String" itemvalue="Python.pe027" />
+      <item index="10" class="java.lang.String" itemvalue="Python.pe078" />
+      <item index="11" class="java.lang.String" itemvalue="Python.pe116" />
+      <item index="12" class="java.lang.String" itemvalue="Python.pe050" />
+      <item index="13" class="java.lang.String" itemvalue="Python.pe007" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -657,7 +657,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944155" sideWeight="0.7124183" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22189128" sideWeight="0.6580227" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22189128" sideWeight="0.6580227" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44357365" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1669107" sideWeight="0.29411766" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25326797" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -779,7 +779,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pe057.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="57" selection-start="609" selection-end="609" vertical-scroll-proportion="0.39593908" vertical-offset="89" max-vertical-offset="703">
+        <state line="20" column="33" selection-start="722" selection-end="722" vertical-scroll-proportion="0.642978" vertical-offset="0" max-vertical-offset="703">
           <folding />
         </state>
       </provider>
