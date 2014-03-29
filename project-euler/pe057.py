@@ -24,10 +24,7 @@ __date__ = '14-3-29'
 __author__ = 'SUN'
 
 if __name__ == '__main__':
-    numerator = 1
-    denominator = 1
-    count = 0
-    N = 1000
+    numerator, denominator, count, N = 1, 1, 0, 1000
     for i in range(N):
         numerator, denominator = numerator + 2 * denominator, numerator + denominator
         if len(str(numerator)) > len(str(denominator)):
