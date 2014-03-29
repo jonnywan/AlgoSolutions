@@ -10,17 +10,18 @@
  * 
  */
 public class Anagrams {
+
     public ArrayList<String> anagrams(String[] strs) {
         ArrayList<String> res = new ArrayList<String>();
         Map<String, Integer> map = new HashMap<String, Integer>();
-        for(int i = 0; i < strs.length; i++) {
-            char[] chars = strs[i].toCharArray();
-            Arrays.sort(chars);
-            String s = new String(chars);
-            if(!map.containsKey(s)) 
+        for (int i = 0; i < strs.length; i++) {
+            char[] c = strs[i].toCharArray();
+            Arrays.sort(c);
+            String s = new String(c);
+            if (!map.containsKey(s)) {
                 map.put(s, i);
-            else {
-                if(map.get(s) >= 0) {
+            } else {
+                if (map.get(s) >= 0) {
                     res.add(strs[map.get(s)]);
                     map.put(s, -1);
                 }
@@ -29,4 +30,5 @@ public class Anagrams {
         }
         return res;
     }
+
 }
