@@ -59,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pe046.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pe046.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pe046.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="26" selection-start="793" selection-end="793" vertical-scroll-proportion="0.75526315" vertical-offset="302" max-vertical-offset="779">
+            <state line="30" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="779">
               <folding />
             </state>
           </provider>
@@ -86,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pe058.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pe058.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pe058.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="16" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="855">
+            <state line="39" column="37" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.45" vertical-offset="570" max-vertical-offset="950">
               <folding />
             </state>
           </provider>
@@ -119,8 +119,8 @@
         <option value="$PROJECT_DIR$/pe045.py" />
         <option value="$PROJECT_DIR$/pe052.py" />
         <option value="$PROJECT_DIR$/pe057.py" />
-        <option value="$PROJECT_DIR$/pe058.py" />
         <option value="$PROJECT_DIR$/pe046.py" />
+        <option value="$PROJECT_DIR$/pe058.py" />
       </list>
     </option>
   </component>
@@ -208,7 +208,7 @@
       <recent name="F:\AlgoSolutions\project-euler" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pe046">
+  <component name="RunManager" selected="Python.pe058">
     <configuration default="false" name="pe043" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -669,7 +669,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44357365" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1669107" sideWeight="0.29411766" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25326797" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3419773" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3419773" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -780,16 +780,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pe058.py">
+    <entry file="file://$PROJECT_DIR$/pe046.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="16" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="855">
+        <state line="30" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="779">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pe046.py">
+    <entry file="file://$PROJECT_DIR$/pe058.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="26" selection-start="793" selection-end="793" vertical-scroll-proportion="0.75526315" vertical-offset="302" max-vertical-offset="779">
+        <state line="39" column="37" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.45" vertical-offset="570" max-vertical-offset="950">
           <folding />
         </state>
       </provider>

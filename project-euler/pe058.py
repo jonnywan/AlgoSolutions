@@ -21,6 +21,8 @@ with side length 9 will be formed. If this process is continued, what is the
 side length of the square spiral for which the ratio of primes along both
 diagonals first falls below 10%?
 """
+import time
+
 __date__ = '14-3-30'
 __author__ = 'SUN'
 
@@ -32,9 +34,12 @@ def is_prime(n):
     return all(n % k != 0 for k in range(7, int(n ** 0.5) + 1, 2))
 
 if __name__ == '__main__':
-    count = 0
-    for i in range(1000):
-        if is_prime(i):
-            count += 1
-            print(i)
-    print(count)
+    start = time.clock()
+    count = 3
+    i = 3
+    while count / (2 * i - 1) >= 0.1:
+        i += 2
+        count += [is_prime(x) for x in [i ** 2, i ** 2 - i + 1,
+                    i ** 2 - 2 * i + 2, i ** 2 - 3 * i + 3]].count(True)
+    print(i)
+    print('Runtime is ', time.clock() - start)
