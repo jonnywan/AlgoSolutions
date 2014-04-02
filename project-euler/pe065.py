@@ -23,4 +23,18 @@ Find the sum of digits in the numerator of the 100th convergent of the continued
 __date__ = '14-4-2'
 __author__ = 'SUN'
 
+def calculate(k):
+    if k < 1:
+        return None
+    if k == 1:
+        return 2, 1
+    n = 1
+    d = 2 * k // 3 if k % 3 == 0 else 1
+    for i in range(k - 1, 1, -1):
+        x = 2 * i // 3 if i % 3 == 0 else 1
+        n, d = d, x * d + n
+    n += 2 * d
+    return n, d
+
 if __name__ == '__main__':
+    print(sum(int(c) for c in str(calculate(100)[0])))
