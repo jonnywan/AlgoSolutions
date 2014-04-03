@@ -23,3 +23,11 @@ billion years to check them all. There is an efficient algorithm to solve it.
 """
 __date__ = '14-4-3'
 __author__ = 'SUN'
+
+if __name__ == '__main__':
+    triangle = []
+    f = open('pe067.txt')
+    for line in f:
+        triangle.append([int(x) for x in line.split(' ')])
+        print([int(x) for x in line.split(' ')])
+        
