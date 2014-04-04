@@ -55,7 +55,6 @@ public class LongestValidParentheses {
         }
         return maxLen;
     }
-    
 
 /*****************************************************************************/
 
