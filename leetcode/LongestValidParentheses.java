@@ -31,4 +31,50 @@ public class LongestValidParentheses {
         return answer;
     }
 
+/*****************************************************************************/
+
+    public int longestValidParentheses(String s) {
+        return Math.max(helper(s, 0, s.length(), 1, '('), 
+                helper(s, s.length() - 1, -1, -1, ')'));
+    }
+
+    public int helper(String s, int start, int end, int step, char c) {
+        int maxLen = 0;
+        int begin = start - step;
+        int count = 0;
+        for (int i = start; i != end; i += step) {
+            if (s.charAt(i) == c) 
+                count++;
+            else if (count == 0)
+                begin = i;
+            else {
+                count--;
+                if (count == 0)
+                    maxLen = Math.max(maxLen, Math.abs(i - begin));
+            }
+        }
+        return maxLen;
+    }
+    
+
+/*****************************************************************************/
+
+    public int longestValidParentheses(String s) {
+        int len = s.length();
+        int[] dp = new int[len];
+        int answer = 0;
+        for (int i = len - 2; i >= 0; i--) {
+            if (s.charAt(i) == '(') {
+                int j = i + 1 + dp[i + 1];
+                if (j < len && s.charAt(j) == ')') {
+                    dp[i] = dp[i + 1] + 2;
+                    if (j + 1 < len)
+                        dp[i] += dp[j + 1];
+                }
+            }
+            answer = Math.max(answer, dp[i]);
+        }
+        return answer;
+    }
+
 }
