@@ -35,7 +35,7 @@
       <file leaf-file-name="pe058.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pe058.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="65" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="950">
+            <state line="33" column="65" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="950">
               <folding />
             </state>
           </provider>
@@ -44,16 +44,7 @@
       <file leaf-file-name="pe067.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pe067.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="2" selection-start="703" selection-end="703" vertical-scroll-proportion="0.49238577" vertical-offset="108" max-vertical-offset="722">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pe102.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pe102.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="23" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="19095">
+            <state line="34" column="25" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.7007874" vertical-offset="379" max-vertical-offset="760">
               <folding />
             </state>
           </provider>
@@ -62,7 +53,7 @@
       <file leaf-file-name="pe067.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pe067.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="17" selection-start="14867" selection-end="14867" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="1995">
+            <state line="6" column="19" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1995">
               <folding />
             </state>
           </provider>
@@ -173,12 +164,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -724,11 +715,11 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944155" sideWeight="0.7124183" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21816827" sideWeight="0.6585366" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21816827" sideWeight="0.6596434" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44357365" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1669107" sideWeight="0.29411766" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34146342" sideWeight="0.5003723" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34146342" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34035656" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -828,23 +819,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pe102.txt">
+    <entry file="file://$PROJECT_DIR$/pe067.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="19095">
+        <state line="6" column="19" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1995">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pe067.txt">
+    <entry file="file://$PROJECT_DIR$/pe102.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="17" selection-start="14867" selection-end="14867" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="1995">
+        <state line="9" column="23" selection-start="263" selection-end="263" vertical-scroll-proportion="-1.496063" vertical-offset="741" max-vertical-offset="19095">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pe067.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="2" selection-start="703" selection-end="703" vertical-scroll-proportion="0.49238577" vertical-offset="108" max-vertical-offset="722">
+        <state line="34" column="25" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.7007874" vertical-offset="379" max-vertical-offset="760">
           <folding />
         </state>
       </provider>
