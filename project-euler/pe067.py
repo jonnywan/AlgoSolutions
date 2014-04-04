@@ -30,4 +30,3 @@ if __name__ == '__main__':
     for line in f:
         triangle.append([int(x) for x in line.split(' ')])
         print([int(x) for x in line.split(' ')])
-        
