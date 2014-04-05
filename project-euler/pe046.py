@@ -26,6 +26,9 @@ def is_prime(n):
         return n == 2 or n == 3 or n == 5
     return all(n % i != 0 for i in range(7, int(n ** 0.5) + 1, 2))
 
+def is_prime_1(n):
+    return not (n < 2 or any(n % i == 0 for i in range(2, int(n ** 0.5) + 1)))
+
 def is_go_other_con(n):
     return any(is_prime(n - 2 * i * i) for i in range(int((n / 2) ** 0.5) + 1))
 
