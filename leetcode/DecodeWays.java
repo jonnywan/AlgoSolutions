@@ -29,10 +29,9 @@ public class DecodeWays {
                 dp[i + 1] += dp[i - 1];
             else if (s.charAt(i) != '0') {
                 dp[i + 1] += dp[i];
-                int twoBits = Integer.parseInt(s.substring(i - 1, i + 1));
-                if (twoBits >= 11 && twoBits <= 26) {
-                    dp[i + 1] += dp[i - 1];
-                }     
+                if (s.charAt(i - 1) == '1' 
+                        || s.charAt(i - 1) == '2' && s.charAt(i) <= '6')
+                    dp[i + 1] += dp[i - 1];     
             }
         }
         return dp[s.length()];
@@ -40,7 +39,7 @@ public class DecodeWays {
 
 /**************************** updated 2014.04.06 *****************************/
 
-    O(n) time; O(1) space.
+    // O(n) time; O(1) space.
     public int numDecodings(String s) {
         if (s.length() == 0 || s.charAt(0) == '0')
             return 0;
@@ -53,8 +52,8 @@ public class DecodeWays {
                 next += prev;
             else if (s.charAt(i) != '0') {
                 next += cur;
-                int twoBits = Integer.parseInt(s.substring(i - 1, i + 1));
-                if (twoBits >= 11 && twoBits <= 26)
+                if (s.charAt(i - 1) == '1' 
+                        || s.charAt(i - 1) == '2' && s.charAt(i) <= '6')
                     next += prev;
             }
             prev = cur;
