@@ -44,7 +44,7 @@
       <file leaf-file-name="pe070.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pe070.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="29" selection-start="1037" selection-end="1037" vertical-scroll-proportion="-0.537859" vertical-offset="890" max-vertical-offset="1273">
+            <state line="61" column="46" selection-start="1786" selection-end="1786" vertical-scroll-proportion="2.0417755" vertical-offset="377" max-vertical-offset="1273">
               <folding>
                 <element signature="e#605#616#0" expanded="true" />
               </folding>
@@ -703,7 +703,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44357365" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1669107" sideWeight="0.29411766" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34035656" sideWeight="0.5003723" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33711508" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33711508" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -813,7 +813,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pe070.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="29" selection-start="1037" selection-end="1037" vertical-scroll-proportion="-0.537859" vertical-offset="890" max-vertical-offset="1273">
+        <state line="61" column="46" selection-start="1786" selection-end="1786" vertical-scroll-proportion="2.0417755" vertical-offset="377" max-vertical-offset="1273">
           <folding>
             <element signature="e#605#616#0" expanded="true" />
           </folding>
