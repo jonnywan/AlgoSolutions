@@ -13,6 +13,8 @@ ways:
 What is the first value which can be written as the sum of primes in over five
 thousand different ways?
 """
+import time
+
 __date__ = '14-4-8'
 __author__ = 'SUN'
 
@@ -24,9 +26,9 @@ def prime_array(n):
             for j in range(i ** 2, n + 1, i):
                 is_prime[j] = False
     prime = []
-    for x in is_prime:
-        if x:
-            prime.append(x)
+    for i in range(len(is_prime)):
+        if is_prime[i]:
+            prime.append(i)
     return prime
 
 def ways_of_prime(n):
@@ -39,4 +41,9 @@ def ways_of_prime(n):
     return ways[n]
 
 if __name__ == '__main__':
-    print(ways_of_prime(10))
+    start = time.clock()
+    i = 10
+    while ways_of_prime(i) <= 5000:
+        i += 1
+    print(i)
+    print('Runtime is ', time.clock() - start)
