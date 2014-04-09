@@ -22,7 +22,7 @@ public class RestoreIPAddresses {
             res.add(ip);
         } else if (n > 0) {
             for (int i = 0; i < Math.min(subStr.length(), 3); i++) {
-                if (i > 0 && subStr.charAt(0) == '0')
+                if (i > 0 && subStr.charAt(0) == '0')  // heading zeros are not allowed.
                     continue;
                 if (Integer.parseInt(subStr.substring(0, i + 1)) <= 255) {
                     String temp = ip;
