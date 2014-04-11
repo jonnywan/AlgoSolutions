@@ -19,47 +19,28 @@ import java.util.*;
 public class ThreeSum {
 
     public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
-        HashSet<ArrayList<Integer>> res = new HashSet<ArrayList<Integer>>();
+        Set<ArrayList<Integer>> set = new HashSet<ArrayList<Integer>>();
         Arrays.sort(num);
-        for (int i = 0; i < num.length; i++) {
-            ArrayList<ArrayList<Integer>> subList = twoSum(num, -num[i]);
-            for (ArrayList<Integer> list : subList) {
-                if (list.get(0) != i && list.get(1) != i) {
-                    int[] temp = new int[3];
-                    temp[0] = i;
-                    temp[1] = list.get(0);
-                    temp[2] = list.get(1);
-                    Arrays.sort(temp);
-                    ArrayList<Integer> triple = new ArrayList<Integer>();
-                    for (int j = 0; j < 3; j ++) 
-                        triple.add(num[temp[j]]);
-                    if (!res.contains(triple))
-                        res.add(triple);
+        for (int i = 0; i < num.length - 2; i++) {
+            int j = i + 1;
+            int k = num.length - 1;
+            while (j < k) {
+                if (num[i] + num[j] + num[k] == 0) {
+                    ArrayList<Integer> list = new ArrayList<Integer>();
+                    list.add(num[i]);
+                    list.add(num[j]);
+                    list.add(num[k]);
+                    j++;
+                    k--;
+                    set.add(list);
+                } else if (num[i] + num[j] + num[k] < 0) {
+                    j++;
+                } else {
+                    k--;
                 }
             }
         }
-        return new ArrayList<ArrayList<Integer>>(res);
+        return new ArrayList<ArrayList<Integer>>(set);
     }
 
-    public ArrayList<ArrayList<Integer>> twoSum(int[] num, int target) {
-        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
-        int i = 0; 
-        int j = num.length - 1;
-        while (i < j) {
-            if (num[i] + num[j] == target) {
-                ArrayList<Integer> list = new ArrayList<Integer>();
-                list.add(i);
-                list.add(j);
-                res.add(list);
-                i++;
-                j--;
-            } else if (num[i] + num[j] < target) {
-                i++;
-            } else {
-                j--;
-            }
-        }
-        return res;
-    }
-	
 }
