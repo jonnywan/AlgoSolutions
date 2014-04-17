@@ -15,6 +15,8 @@ at 1 or 89.
 
 How many starting numbers below ten million will arrive at 89?
 """
+import time
+
 __date__ = '14-4-17'
 __author__ = 'SUN'
 
@@ -22,9 +24,15 @@ def square_digits_sum(n):
     return sum(int(c) ** 2 for c in str(n))
 
 def square_end_with(n):
-    while square_digits_sum(n) != 1 and square_digits_sum(n) != 89:
+    while n != 1 and n != 89:
         n = square_digits_sum(n)
     return n
 
 if __name__ == '__main__':
-    print(square_digits_sum(89))
+    start = time.clock()
+    answer = 0
+    for i in range(1, 10000000):
+        if square_end_with(i) == 89:
+            answer += 1
+    print(answer)
+    print('Runtime is ', time.clock() - start)
