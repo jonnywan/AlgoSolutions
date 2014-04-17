@@ -36,10 +36,10 @@ def square_end_with(n):
 		return value
 
 if __name__ == '__main__':
-    start = time.clock()
-    answer = 0
-    for i in range(1, 10000000):
-        if square_end_with(i) == 89:
-            answer += 1
-    print(answer)
-    print('Runtime is ', time.clock() - start)
+	start = time.clock()
+	answer = 0
+	for i in range(1, 10000000):
+		if square_end_with(i) == 89:
+			answer += 1
+	print(answer)
+	print('Runtime is', time.clock() - start)
