@@ -20,13 +20,20 @@ import time
 __date__ = '14-4-17'
 __author__ = 'SUN'
 
+cache = [0] * 10000000
+
 def square_digits_sum(n):
     return sum(int(c) ** 2 for c in str(n))
 
 def square_end_with(n):
-    while n != 1 and n != 89:
-        n = square_digits_sum(n)
-    return n
+	if n == 1 or n == 89:
+		return n
+	if n < len(cache) and cache[n] > 0:
+		return cache[n]
+	if n < len(cache):
+		value = square_end_with(square_digits_sum(n))
+		cache[n] = value
+		return value
 
 if __name__ == '__main__':
     start = time.clock()
