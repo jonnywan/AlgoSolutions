@@ -14,8 +14,19 @@ In fact, d = 12 is the smallest denominator having a resilience R(d) < 4/10 
 
 Find the smallest denominator d, having a resilience R(d) < 15499/94744 .
 """
+from pe069 import prime_sieve
+
 __date__ = '14-4-19'
 __author__ = 'SUN'
 
 if __name__ == '__main__':
-	a = phi(12)
+	prime = prime_sieve(30)
+	n = 1
+	d = 1
+	for i in range(len(prime)):
+		n *= prime[i] - 1
+		d *= prime[i]
+		for j in range(2, prime[i]):
+			if n * j / (d * j - 1) < 15499 / 94744:
+				print(d * j)
+				exit(0)
