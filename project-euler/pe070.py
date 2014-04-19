@@ -45,8 +45,6 @@ if __name__ == '__main__':
     start = time.clock()
     N = 10000000
     prime = prime_sieve(4000)
-    i = 0
-    j = 0
     answer = 0
     ratio = 3
     for i in range(len(prime)):
