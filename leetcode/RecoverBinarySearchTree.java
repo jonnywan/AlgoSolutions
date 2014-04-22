@@ -28,7 +28,28 @@
 public class RecoverBinarySearchTree {
     
     public void recoverTree(TreeNode root) {
-
+        ArrayList<TreeNode> list = new ArrayList<TreeNode>();
+        inorderTraversal(root, list);
+        TreeNode first = null;
+        TreeNode second = null;
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i).val < list.get(i - 1).val) {
+                if (first == null)
+                    first = list.get(i - 1);
+                second = list.get(i);
+            }
+        }
+        int temp = first.val;
+        first.val = second.val;
+        second.val = temp;
+    }
+    
+    public void inorderTraversal(TreeNode root, ArrayList<TreeNode> list) {
+        if (root == null)
+            return;
+        inorderTraversal(root.left, list);
+        list.add(root);
+        inorderTraversal(root.right, list);
     }
 
 }
