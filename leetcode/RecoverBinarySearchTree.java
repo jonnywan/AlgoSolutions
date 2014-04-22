@@ -26,6 +26,11 @@
  */
 
 public class RecoverBinarySearchTree {
+
+    /*
+     * Thanks to AnnieKim. This is the Java version of her code.
+     * https://github.com/AnnieKim/LeetCode/blob/master/RecoverBinarySearchTree.h
+     */
     
     public void recoverTree(TreeNode root) {
         ArrayList<TreeNode> list = new ArrayList<TreeNode>();
