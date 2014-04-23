@@ -21,7 +21,6 @@ def digit_sum(n):
     return sum(map(int, str(n)))
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     start = time.clock()
     array = []
     for base in range(2, 100):
@@ -31,15 +30,3 @@ if __name__ == '__main__':
                 array.append(p)
     print(sorted(array)[29])
     print('Runtime is', time.clock() - start)
-=======
-	start = time.clock()
-	array = []
-	for base in range(2, 100):
-		for e in range(2, 30):
-			p = base ** e
-			if digit_sum(p) == base:
-				array.append(p)
-	print(sorted(array)[29])
-	
-	print('Runtime is', time.clock() - start)
->>>>>>> 45a6ee77eec3d33bd655a6b138c429c97c1199ca
