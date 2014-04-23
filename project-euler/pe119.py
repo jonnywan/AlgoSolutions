@@ -18,28 +18,15 @@ __date__ = '14-4-23'
 __author__ = 'SUN'
 
 def digit_sum(n):
-	s = 0
-	while n > 0:
-		s += n % 10
-		n //= 10
-	return s
-
-def check(n):
-	k = digit_sum(n)
-	p = k
-	if k == 1:
-		return False
-	while p < n:
-		p *= k
-	return p == n
+	return sum(map(int, str(n)))
 
 if __name__ == '__main__':
 	start = time.clock()
-	count = 0
-	i = 10
-	while count < 30:
-		if check(i):
-			count += 1
-			print('count = ', count, ', i = ', i, ', digitsum = ', digit_sum(i))
-		i += 1
+	array = []
+	for base in range(2, 100):
+		for e in range(2, 30):
+			p = base ** e
+			if digit_sum(p) == base:
+				array.append(p)
+	print(sorted(array)[29])
 	print('Runtime is', time.clock() - start)
