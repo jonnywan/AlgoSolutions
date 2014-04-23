@@ -29,4 +29,5 @@ if __name__ == '__main__':
 			if digit_sum(p) == base:
 				array.append(p)
 	print(sorted(array)[29])
+	
 	print('Runtime is', time.clock() - start)
