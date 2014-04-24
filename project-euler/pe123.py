@@ -10,8 +10,10 @@ The least value of n for which the remainder first exceeds 10^9 is 7037.
 
 Find the least value of n for which the remainder first exceeds 10^10.
 """
+from pe069 import prime_sieve
+
 __date__ = '14-4-24'
 __author__ = 'SUN'
 
 if __name__ == '__main__':
-    
+    prime = prime_sieve(1000000)
