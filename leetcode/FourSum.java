@@ -19,8 +19,8 @@
 public class FourSum {
     
     public ArrayList<ArrayList<Integer>> fourSum(int[] num, int target) {
-        Arrays.sort(num);
         ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        Arrays.sort(num);
         for (int i = 0; i < num.length; i++) {
             if (i > 0 && num[i] == num[i - 1])
                 continue;
