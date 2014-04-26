@@ -2,9 +2,13 @@ public class FourSum {
     
     public ArrayList<ArrayList<Integer>> fourSum(int[] num, int target) {
         Arrays.sort(num);
-        HashSet<ArrayList<Integer>> hSet = new HashSet<ArrayList<Integer>>();
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
         for (int i = 0; i < num.length; i++) {
+            if (i > 0 && num[i] == num[i - 1])
+                continue;
             for (int j = i + 1; j < num.length; j++) {
+                if (j > i + 1 && num[j] == num[j - 1])
+                    continue;
                 int k = j + 1;
                 int p = num.length - 1;
                 while (k < p) {
@@ -19,14 +23,18 @@ public class FourSum {
                         list.add(num[j]);
                         list.add(num[k]);
                         list.add(num[p]);
-                        if (!hSet.contains(list)) 
-                            hSet.add(list);
-                        k++;
-                        p--;
+                        res.add(list);
+                        do {
+                            k++;
+                        } while (k < p && num[k] == num[k - 1]);
+                        do {
+                            p--;
+                        } while (k < p && num[p] == num[p + 1]);
                     }
                 }
             }
         }
-        return new ArrayList<ArrayList<Integer>>(hSet);
+        return res;
     }
+
 }
