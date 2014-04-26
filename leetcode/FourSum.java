@@ -5,7 +5,7 @@
 
  * Note:
  * Elements in a quadruplet (a,b,c,d) must be in non-descending order. (ie, 
- * a ¡Ü b ¡Ü c ¡Ü d)
+ * a <= b <= c <= d)
  * The solution set must not contain duplicate quadruplets.
  *     For example, given array S = {1 0 -1 0 -2 2}, and target = 0.
  * 
