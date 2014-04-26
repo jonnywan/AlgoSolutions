@@ -73,7 +73,7 @@
       <file leaf-file-name="pe125.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pe125.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="39" selection-start="847" selection-end="847" vertical-scroll-proportion="0.32142857" vertical-offset="368" max-vertical-offset="760">
+            <state line="11" column="80" selection-start="522" selection-end="522" vertical-scroll-proportion="-0.40561223" vertical-offset="368" max-vertical-offset="760">
               <folding />
             </state>
           </provider>
@@ -789,7 +789,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44227642" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1669107" sideWeight="0.29411766" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2617886" sideWeight="0.5003723" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3203252" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3203252" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -923,7 +923,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pe125.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="39" selection-start="847" selection-end="847" vertical-scroll-proportion="0.32142857" vertical-offset="368" max-vertical-offset="760">
+        <state line="11" column="80" selection-start="522" selection-end="522" vertical-scroll-proportion="-0.40561223" vertical-offset="368" max-vertical-offset="760">
           <folding />
         </state>
       </provider>
