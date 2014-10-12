@@ -21,7 +21,7 @@ public class SingleNumber {
         return A[i];
     }
 
-/*****************************updated 20141012********************************/
+/**************************** updated 20141012 *******************************/
 
     public int singleNumber(int[] A) {
         int result = A[0];
