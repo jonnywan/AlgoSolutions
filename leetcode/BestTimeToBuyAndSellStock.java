@@ -5,12 +5,14 @@
  * share of the stock), design an algorithm to find the maximum profit.
  */
 public class BestTimeToBuyAndSellStock {
+    
 /******************************** updated 2013/11/20 *****************************/
     public int maxProfit(int[] prices) {
         int N = prices.length;
-        if(N == 0)
+        if (N == 0)
             return 0;
-        int[] leftMin = new int[N], rightMax = new int[N];
+        int[] leftMin = new int[N];
+        int[] rightMax = new int[N];
         leftMin[0] = prices[0];
         rightMax[N - 1] = prices[N - 1];
         for(int i = 1; i < N; i++) {
@@ -26,11 +28,13 @@ public class BestTimeToBuyAndSellStock {
 /********************************************************************************/
 
     public int maxProfit(int[] prices) {
-        int res = 0, min = Integer.MAX_VALUE;
-        for(int i = 0; i < prices.length; i++) {
-            min = Math.min(prices[i], min);
-            res = Math.max(res, prices[i] - min);
+        public int maxProfit(int[] prices) {
+        int result = 0;
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < prices.length; i++) {
+            min = Math.min(min, prices[i]);
+            result = Math.max(result, prices[i] - min);
         }
-        return res;
+        return result;
     }
 }
