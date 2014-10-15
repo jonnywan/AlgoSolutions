@@ -18,17 +18,20 @@
  * }
  */
 public class RemoveDuplicatesFromSortedList {
+    
     public ListNode deleteDuplicates(ListNode head) {
-        if(head != null) {
-            ListNode prev = head, cursor = head.next;
-            while(cursor != null) {
-                if(prev.val == cursor.val) 
-                    prev.next = cursor.next;
-                 else 
-                    prev = cursor;
-                cursor = cursor.next;
-            }
-        }
+        if (head == null)
+            return head;
+        ListNode cur = head;
+        ListNode next = cur.next;
+        while (next != null) {
+            if (cur.val == next.val)
+                cur.next = next.next;
+            else
+                cur = cur.next;
+            next = next.next;
+        }       
         return head;
     }
+
 }
