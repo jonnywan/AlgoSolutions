@@ -28,23 +28,26 @@ public class SearchInsertPosition {
             return binarySearch(A, mid + 1, high, target);
     }
 */
+/*****************************************************************************/
 
-
+    // O(lgn) time, O(1) space
     public int searchInsert(int[] A, int target) {
-        int start = 0, end = A.length - 1;
-        while(start <= end) {
+        int start = 0;
+        int end = A.length - 1;
+        while (start <= end) {
             int mid = start + (end - start) / 2;
-            if(target == A[mid])
-                return mid;
-            if(target < A[mid])
-                end = mid - 1;
-            else
+            if (A[mid] < target) 
                 start = mid + 1;
+            else if (A[mid] == target) 
+                return mid;
+            else 
+                end = mid - 1;
         }
         return start;
-    }
+    }    
 
 /*************************** updated 20141015 ********************************/
+    // O(n) time, O(1) space
 
     public int searchInsert(int[] A, int target) {
         for (int i = 0; i < A.length; i++) {
