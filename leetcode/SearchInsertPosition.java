@@ -43,4 +43,18 @@ public class SearchInsertPosition {
         }
         return start;
     }
+
+/*************************** updated 20141015 ********************************/
+
+    public int searchInsert(int[] A, int target) {
+        for (int i = 0; i < A.length; i++) {
+            if (i == 0 && A[i] > target || A[i] == target)
+                return i;
+            if (i < A.length - 1 && A[i] < target && target < A[i + 1]
+                    || i == A.length - 1 && A[i] < target)
+                return i + 1;
+        }
+        return -1;
+    }
+
 }
