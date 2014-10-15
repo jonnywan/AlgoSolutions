@@ -22,36 +22,36 @@
  * }
  */
 public class BinaryTreeInorderTraversal {
+
 /************************ updated 2013/11/30 ************************/
+
     public ArrayList<Integer> inorderTraversal(TreeNode root) {
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root != null) {
-            res = inorderTraversal(root.left);
-            res.add(root.val);
-            res.addAll(inorderTraversal(root.right));
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        if (root != null) {
+            result.addAll(inorderTraversal(root.left));
+            result.add(root.val);
+            result.addAll(inorderTraversal(root.right));
         }
-        return res;
+        return result;
     }
 
 /**************************************************************/
 
     public ArrayList<Integer> inorderTraversal(TreeNode root) {
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root != null) {
-            Stack<TreeNode> stack = new Stack<TreeNode>();
-            TreeNode cur = root;
-            while(!stack.isEmpty() || cur != null) {
-                if(cur != null) {
-                    stack.push(cur);
-                    cur = cur.left;
-                } else {
-                    cur = stack.pop();
-                    res.add(cur.val);
-                    cur = cur.right;
-                }
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        TreeNode cur = root;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        while (!stack.isEmpty() || cur != null) {
+            if (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            } else {
+                cur = stack.pop();
+                result.add(cur.val);
+                cur = cur.right;
             }
         }
-        return res;
+        return result; 
     }
 
 /**************************************************************/
