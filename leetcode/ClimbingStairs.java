@@ -4,6 +4,7 @@
  * you climb to the top?
  */
 public class ClimbingStairs {
+
     public int climbStairs(int n) {
         int[] res = new int[n + 1];
         res[0] = 1;
@@ -16,12 +17,14 @@ public class ClimbingStairs {
 /************************ updated 2013/11/20 ***********************/
 
     public int climbStairs(int n) {
-        int a = 0, b = 1, res = 1;
-        for(int i = 1; i <= n; i++) {
-            res = a + b;
-            a = b; 
-            b = res;
+        int result = 1;
+        int a = 1;
+        int b = 1;
+        for (int i = 1; i < n; i++) {
+            result = a + b;
+            a = b;
+            b = result;
         }
-        return res;
+        return result;
     }
 }
