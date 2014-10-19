@@ -1,5 +1,6 @@
 /*
- * Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+ * Given a binary tree, check whether it is a mirror of itself (ie, symmetric 
+ * around its center).
 
  * For example, this binary tree is symmetric:
 
@@ -15,23 +16,6 @@
  *   2   2
  *    \   \
  *    3    3
- * Note:
- * Bonus points if you could solve it both recursively and iteratively.
-
- * OJ's Binary Tree Serialization:
- * The serialization of a binary tree follows a level order traversal, where '#' signifies a path 
- * terminator where no node exists below.
-
- * Here's an example:
-
- *    1
- *   / \
- *  2   3
- *     /
- *    4
- *     \
- *      5
- * The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
  */
 /**
  * Definition for binary tree
@@ -45,17 +29,20 @@
 import java.util.*;
 
 public class SymmetricTree {
+/**************************** updated 20141020 *******************************/
+
     public boolean isSymmetric(TreeNode root) {
         return root == null || isSymmetricHelper(root.left, root.right);
     }
 
-    public boolean isSymmetricHelper(TreeNode p, TreeNode q) {
-        if(p == null && q == null || p != null && q == null || p == null && q != null) 
-            return p == null && q == null;
-        return (p.val == q.val) && isSymmetricHelper(p.left, q.right) && isSymmetricHelper(p.right, q.left);
-    } 
+    public boolean isSymmetricHelper(TreeNode tree1, TreeNode tree2) {
+        return tree1 == null && tree2 == null || 
+            tree1 != null &&tree2 != null && tree1.val == tree2.val 
+            && isSymmetricHelper(tree1.left, tree2.right) 
+            && isSymmetricHelper(tree1.right, tree2.left);
+    }
 
-/***********************************************************************************************************/
+/*****************************************************************************/
 
     public boolean isSymmetric(TreeNode root) {
         if(root == null)
