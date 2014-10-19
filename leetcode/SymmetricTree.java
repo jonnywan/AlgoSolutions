@@ -45,22 +45,22 @@ public class SymmetricTree {
 /*****************************************************************************/
 
     public boolean isSymmetric(TreeNode root) {
-        if(root == null)
+        if (root == null)
             return true;
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root.left);
         queue.offer(root.right);
-        while(!queue.isEmpty()) {
-            TreeNode lNode = queue.poll();
-            TreeNode rNode = queue.poll();
-            if(lNode == null && rNode == null)
+        while (!queue.isEmpty()) {
+            TreeNode L = queue.poll();
+            TreeNode R = queue.poll();
+            if (L == null && R == null)
                 continue;
-            if(lNode == null || rNode == null || lNode.val != rNode.val)
+            if (L == null || R == null || L.val != R.val)
                 return false;
-            queue.offer(lNode.left);
-            queue.offer(rNode.right);
-            queue.offer(lNode.right);
-            queue.offer(rNode.left);
+            queue.offer(L.left);
+            queue.offer(R.right);
+            queue.offer(L.right);
+            queue.offer(R.left);
         }
         return true;
     }
