@@ -13,6 +13,7 @@
  * ]
  */
 public class PascalTriangle {
+
     public ArrayList<ArrayList<Integer>> generate(int numRows) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
         if(numRows <= 0)
@@ -30,4 +31,5 @@ public class PascalTriangle {
         }
         return res;
     }
+
 }
