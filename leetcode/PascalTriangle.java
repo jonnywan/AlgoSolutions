@@ -14,6 +14,9 @@
  */
 public class PascalTriangle {
 
+// can not pass the leetcode oj, because the List interface is incompatible
+// with ArrayList class.
+
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (numRows == 0)
