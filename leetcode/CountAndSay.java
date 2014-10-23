@@ -53,4 +53,26 @@ public class CountAndSay {
         res += "" + cnt + s.charAt(s.length() - 1);
         return res;
     }
+
+
+/**************************** updated 20141023 *******************************/
+
+    public String countAndSay(int n) {
+        String result = "11";
+        for (int i = 2; i <= n; i++) {
+            String next = result; 
+            result = "";
+            int count = 1;
+            for (int j = 1; j < next.length(); j++) {
+                if (next.charAt(j) != next.charAt(j - 1)) {
+                    result += "" + count + next.charAt(j - 1);
+                    count = 1;
+                else 
+                    count++;
+            }
+            result += "" + count + next.charAt(next.length() - 1);
+        }
+        return result;
+    }
+
 }
