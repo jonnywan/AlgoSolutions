@@ -12,38 +12,17 @@
  */
 
 public class CountAndSay {
-/***************************** updated 2014.01.10 ****************************/
-
-    public String countAndSay(int n) {
-        String res = "1";
-        for(int i = 2; i <= n; i++) {
-            int len = res.length();
-            int cnt = 1;
-            String temp = "";
-            for(int j = 1; j < len; j++) {
-                if(res.charAt(j) != res.charAt(j - 1)) {
-                    temp += "" + cnt + res.charAt(j - 1);
-                    cnt = 1;
-                } else {
-                    cnt++;
-                }
-            }
-            temp += "" + cnt + res.charAt(len - 1);
-            res = temp;
-        }
-        return res;
-    }
 
 /*****************************************************************************/
 
     public String countAndSay(int n) {
-        if(n == 1)
+        if (n == 1)
             return "1";
         String s = countAndSay(n - 1);
         int cnt = 1;
         String res = "";
-        for(int i = 1; i < s.length(); i++) {
-            if(s.charAt(i) != s.charAt(i - 1)) {
+        for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i) != s.charAt(i - 1)) {
                 res += "" + cnt + s.charAt(i - 1);
                 cnt = 1;
             } else {
@@ -58,17 +37,18 @@ public class CountAndSay {
 /**************************** updated 20141023 *******************************/
 
     public String countAndSay(int n) {
-        String result = "11";
+        String result = "1";
         for (int i = 2; i <= n; i++) {
             String next = result; 
             result = "";
             int count = 1;
             for (int j = 1; j < next.length(); j++) {
-                if (next.charAt(j) != next.charAt(j - 1)) {
+                if (next.charAt(j) == next.charAt(j - 1))
+                    count++;
+                else {
                     result += "" + count + next.charAt(j - 1);
                     count = 1;
-                else 
-                    count++;
+                }
             }
             result += "" + count + next.charAt(next.length() - 1);
         }
