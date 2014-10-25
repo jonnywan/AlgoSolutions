@@ -15,7 +15,6 @@
  * X can be placed before L and C to make 40 (XL) and 90 (XC respectively)
  * C can be placed before D and M to make 400 (CD) and 900 (CM) according to 
  * the same pattern
- * 
  */
 public class RomanToInteger {
 
