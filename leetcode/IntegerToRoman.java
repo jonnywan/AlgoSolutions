@@ -11,6 +11,7 @@
  * M = 1000;
  */
 public class IntegerToRoman {
+
     public String intToRoman(int num) {
         String[] ones = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
         String[] tens = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
@@ -25,31 +26,28 @@ public class IntegerToRoman {
         return result;
     }
 
-/****************************** updated 2014.01.19 ***************************/
+/******************************** updated 20141027 ***************************/
 
     public String intToRoman(int num) {
-        String[] roman = {"I", "X", "C", "M", "V", "L", "D"};
-        int i = 0;
-        String res = "";
-        while(num > 0) {
-            int low = num % 10;
-            if(low >= 1 && low <= 3)
-                for(int j = 0; j < low; j++)
-                    res = roman[i] + res;
-            if(low == 4)
-                res = roman[i] + roman[i + 4] + res;
-            if(low == 5)
-                res = roman[i + 4] + res;
-            if(low >= 6 && low <= 8) {
-                for(int j = 0; j < low - 5; j++)
-                    res = roman[i] + res;
-                res = roman[i + 4] + res;
+        public String intToRoman(int num) {
+        String result = "";
+        String[] roman = {"I", "V", "X", "L", "C", "D", "M"};
+        int i = 0; 
+        while (num > 0) {
+            int lowBit = num % 10;
+            if (lowBit == 4 || lowBit == 9)
+                result = roman[2 * i] + (lowBit == 4 ? roman[2 * i + 1] : 
+                        roman[2 * i + 2]) + result;
+            else {
+                for (int j = 0; j < lowBit % 5; j++) {
+                    result = roman[2 * i] + result;
+                }
+                if (lowBit >= 5)
+                    result = roman[2 * i + 1] + result;
             }
-            if(low == 9)
-                res = roman[i] + roman[i + 1] + res;
             num /= 10;
             i++;
         }
-        return res;
+        return result;
     }
 }
