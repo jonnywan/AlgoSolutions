@@ -39,9 +39,8 @@ public class IntegerToRoman {
                 result = roman[2 * i] + (lowBit == 4 ? roman[2 * i + 1] : 
                         roman[2 * i + 2]) + result;
             else {
-                for (int j = 0; j < lowBit % 5; j++) {
+                for (int j = 0; j < lowBit % 5; j++) 
                     result = roman[2 * i] + result;
-                }
                 if (lowBit >= 5)
                     result = roman[2 * i + 1] + result;
             }
