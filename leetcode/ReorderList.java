@@ -39,9 +39,9 @@ public class ReorderList {
 /**************************** added 20141028 *********************************/
     // Cannot AC, some bugs to be fixed.
 
-    public void reverseList(ListNode head) {
+    public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null)
-            return;
+            return head;
         ListNode prev = head;
         ListNode cur = prev.next;
         while (cur != null) {
@@ -50,39 +50,32 @@ public class ReorderList {
             head = cur;
             cur = prev.next;
         }
+        return head;
     }
 
     public void reorderList(ListNode head) {
         if (head == null || head.next == null || head.next.next == null)
             return;
         int len = 0;
-        ListNode cur = head;
-        while (cur != null) {
-            len++;
-            cur = cur.next;
+        ListNode cur1 = head;
+        ListNode cur2 = head;
+        while (cur2 != null) {
+            
         }
-        ListNode lastHalf = null;
-        cur = head;
-        for (int i = 0; i < len / 2; i++) {
-            cur = cur.next;
-        }
-        lastHalf = cur.next;
-        cur.next = null;
-        reverseList(lastHalf);
-        cur = head;
-        ListNode cur1 = head.next;
+
+
+
+
+        ListNode cur1 = head;
         ListNode cur2 = lastHalf;
-        for (int i = 1; i < len; i++) {
-            if (i % 2 == 1) {
-                cur.next = cur2;
-                cur2 = cur2.next;
-                cur = cur.next;
-            } else {
-                cur.next = cur1;
-                cur1 = cur1.next;
-                cur = cur.next;
-            }
+        while (cur1 != null || cur2 != null) {
+            cur.next = cur2;
+            cur2 = cur2.next;
+            cur = cur.next;
+            cur.next = cur1;
+            cur1 = cur1.next;
+            cur = cur.next;
         }
-    }
+    } 
 
 }
