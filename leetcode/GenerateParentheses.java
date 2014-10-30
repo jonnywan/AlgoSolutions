@@ -9,19 +9,19 @@
 public class GenerateParentheses {
 /************************** updated 2013/12/10 *******************************/
 
-    public ArrayList<String> generateParenthesis(int n) {
-        ArrayList<String> res = new ArrayList<String>();
-        helper(res, "", n, n);
-        return res;
+    public List<String> generateParenthesis(int n) {
+        List<String> result = new ArrayList<String>();
+        dfs(result, "", n, n);
+        return result;
     }
-    
-    public void helper(ArrayList<String> array, String s, int left, int right) {
-        if(left == 0 && right == 0)
-            array.add(s);
-        if(left > 0)
-            helper(array, s + "(", left - 1, right);
-        if(left < right)
-            helper(array, s + ")", left, right - 1);
+
+    public void dfs(List<String> list, String s, int left, int right) {
+        if (left < 0 || left > right)
+            return;
+        if (left == 0 && right == 0)
+            list.add(s);
+        dfs(list, s + "(", left - 1, right);
+        dfs(list, s + ")", left, right - 1);
     }
 
 /*****************************************************************************/
