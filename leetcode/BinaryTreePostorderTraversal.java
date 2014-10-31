@@ -22,23 +22,20 @@
  * }
  */
 public class BinaryTreePostorderTraversal {
-    public void helper(ArrayList<Integer> list, TreeNode root) {
-        if(root == null)
-            return;
-        if(root.left != null)
-            helper(list, root.left);
-        if(root.right != null)
-            helper(list, root.right);
-        list.add(root.val);
+
+/**************************** updated 20141101 *******************************/
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        if (root != null) { 
+            result = postorderTraversal(root.left);
+            result.addAll(postorderTraversal(root.right));
+            result.add(root.val);
+        }
+        return result;
     }
 
-    public ArrayList<Integer> postorderTraversal_1(TreeNode root) {
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        helper(res, root);
-        return res;
-    }
-
-/********************************************************************/ 
+/*****************************************************************************/ 
 
     public ArrayList<Integer> postorderTraversal_2(TreeNode root) {
         ArrayList<Integer> res = new ArrayList<Integer>();
