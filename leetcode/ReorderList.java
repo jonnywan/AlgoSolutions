@@ -60,4 +60,32 @@ public class ReorderList {
             }
         }
     } 
+
+/**************************** added in 20141031 ******************************/
+
+    public void reorderList(ListNode head) {
+        if (head == null || head.next == null)
+            return;
+        ListNode cur1 = head;
+        ListNode cur2 = head;
+        while (cur2.next != null && cur2.next.next != null) { //find the middle of head;
+            cur1 = cur1.next;
+            cur2 = cur2.next.next;
+        }
+        cur2 = cur1.next;
+        while (cur2.next != null) { //reverse the second half;
+            ListNode temp = cur1.next;
+            cur1.next = cur2.next;
+            cur2.next = cur2.next.next;
+            cur1.next.next = temp;
+        }
+        cur2 = head;
+        while (cur1 != cur2) { //reorder;
+            ListNode temp = cur2.next;
+            cur2.next = cur1.next;
+            cur1.next = cur1.next.next;
+            cur2.next.next = temp;
+            cur2 = cur2.next.next;
+        }
+    }  
 }
