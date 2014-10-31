@@ -20,11 +20,10 @@
  */
 public class ReorderList {
 
-/**************************** added 20141028 *********************************/
-    // Cannot AC, some bugs to be fixed.
+/**************************** added 20141031 *********************************/
 
     public ListNode reverseList(ListNode head) {
-        if (head == null || head.next == null)
+        if (head == null)
             return head;
         ListNode prev = head;
         ListNode cur = prev.next;
@@ -38,28 +37,27 @@ public class ReorderList {
     }
 
     public void reorderList(ListNode head) {
-        if (head == null || head.next == null || head.next.next == null)
+        if (head == null)
             return;
-        int len = 0;
+        ListNode cur = head;
         ListNode cur1 = head;
         ListNode cur2 = head;
-        while (cur2 != null) {
-            
+        while (cur2.next != null && cur2.next.next != null) {
+            cur1 = cur1.next;
+            cur2 = cur2.next.next;
         }
-
-
-
-
-        ListNode cur1 = head;
-        ListNode cur2 = lastHalf;
+        cur2 = reverseList(cur1.next);  
+        cur1.next = null;
+        cur1 = head.next;
         while (cur1 != null || cur2 != null) {
             cur.next = cur2;
             cur2 = cur2.next;
             cur = cur.next;
             cur.next = cur1;
-            cur1 = cur1.next;
-            cur = cur.next;
+            if (cur1 != null) {
+                cur1 = cur1.next;
+                cur = cur.next;
+            }
         }
     } 
-
 }
