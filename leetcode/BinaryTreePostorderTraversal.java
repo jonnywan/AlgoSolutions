@@ -35,28 +35,48 @@ public class BinaryTreePostorderTraversal {
         return result;
     }
 
-/*****************************************************************************/ 
+/*****************************************************************************/
 
-    public ArrayList<Integer> postorderTraversal_2(TreeNode root) {
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        if(root == null)
-            return res;
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        if (root == null)
+            return result;
         Stack<TreeNode> stack = new Stack<TreeNode>();
         stack.push(root);
-        while(!stack.isEmpty()) {
-            TreeNode next =stack.peek();
-            if(next.left == root || next.right == root || (next.left == null && next.right == null)) {
-                stack.pop();
-                res.add(next.val);
-                root = next;
-            }
-            else {
-                if(next.right != null)
-                    stack.push(next.right);
-                if(next.left != null)
-                    stack.push(next.left);
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            result.add(cur.val);
+            if (cur.left != null)
+                stack.push(cur.left);
+            if (cur.right != null)
+                stack.push(cur.right);
+        }
+        Collections.reverse(result);
+        return result;
+    }
+
+/*****************************************************************************/ 
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        if (root == null)
+            return result;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.push(root);
+        TreeNode child = root;
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.peek();
+            if (cur.left == null && cur.right == null || cur.left == child 
+                    || cur.right == child) {
+                child = stack.pop();
+                result.add(child.val);
+            } else {
+                if (cur.right != null)
+                    stack.push(cur.right);
+                if (cur.left != null)
+                    stack.push(cur.left);
             }
         }
-        return res;
-    }   
+        return result;
+    }
 }
