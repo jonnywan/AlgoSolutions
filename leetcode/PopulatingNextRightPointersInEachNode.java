@@ -62,17 +62,17 @@ public class PopulatingNextRightPointersInEachNode {
             }
         }
     }
+*/
 
 
     public void connect(TreeLinkNode root) {
-        if(root == null || root.left == null)
+        if (root == null || root.left == null)
             return;
         root.left.next = root.right;
         root.right.next = root.next != null ? root.next.left : null;
         connect(root.left);
         connect(root.right);
     }
-*/
 
 /***************************** updated 20141102 ******************************/
 
