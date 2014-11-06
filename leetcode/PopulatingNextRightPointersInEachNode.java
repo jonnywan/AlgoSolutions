@@ -76,9 +76,9 @@ public class PopulatingNextRightPointersInEachNode {
 
 /***************************** updated 20141102 ******************************/
 
-    public void connect(TreeNode root) {
+    public void connect(TreeLinkNode root) {
         while (root != null) {
-            TreeNode cur = root;
+            TreeLinkNode cur = root;
             while (cur != null) {
                 if (cur.left != null) 
                     cur.left.next = cur.right;
