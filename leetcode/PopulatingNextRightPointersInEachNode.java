@@ -40,6 +40,7 @@
  * }
  */
 public class PopulatingNextRightPointersInEachNode {
+/*
     public void connect(TreeLinkNode root) {
         if(root == null)
             return;
@@ -62,7 +63,7 @@ public class PopulatingNextRightPointersInEachNode {
             }
         }
     }
-
+*/
 /*****************************************************************************/
 
     public void connect(TreeLinkNode root) {
