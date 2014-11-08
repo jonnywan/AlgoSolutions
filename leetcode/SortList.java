@@ -36,7 +36,7 @@ public class SortList {
         return minNode;
     }
 
-/**************************** deceptive method *******************************/
+/**************************** cheating method *******************************/
 
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null)
