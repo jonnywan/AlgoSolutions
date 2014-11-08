@@ -35,4 +35,26 @@ public class SortList {
         minNode.next = sortList(head);
         return minNode;
     }
+
+/**************************** deceptive method *******************************/
+
+    public ListNode sortList(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        ListNode cur = head;
+        while (cur != null) {
+            list.add(cur.val);
+            cur = cur.next;
+        }
+        Collections.sort(list);
+        cur = head;
+        int i = 0;
+        while (cur != null) {
+            cur.val = list.get(i);
+            cur = cur.next;
+            i++;
+        }
+        return head;
+    }
 }
