@@ -41,28 +41,26 @@
  */
 public class PopulatingNextRightPointersInEachNode {
 
-    public void connect(TreeLinkNode root) {
-        if(root == null)
+   public void connect(TreeLinkNode root) {
+        if (root == null)
             return;
         Queue<TreeLinkNode> curLevel = new LinkedList<TreeLinkNode>();
         Queue<TreeLinkNode> nextLevel = new LinkedList<TreeLinkNode>();
         curLevel.offer(root);
-        while(!curLevel.isEmpty()) {
-            TreeLinkNode curNode = curLevel.poll();
-            if(!curLevel.isEmpty())
-                curNode.next = curLevel.peek();
-            else
-                curNode.next = null;
-            if(curNode.left != null)
-                nextLevel.offer(curNode.left);
-            if(curNode.right != null)
-                nextLevel.offer(curNode.right);
-            if(curLevel.isEmpty()) { 
+        while (!curLevel.isEmpty()) {
+            TreeLinkNode cur = curLevel.poll();
+            if (cur.left != null)
+                nextLevel.offer(cur.left);
+            if (cur.right != null)
+                nextLevel.offer(cur.right);
+            if (!curLevel.isEmpty())
+                cur.next = curLevel.peek();
+            else {
                 curLevel = nextLevel;
                 nextLevel = new LinkedList<TreeLinkNode>();
             }
         }
-    }
+    } 
 
 /*****************************************************************************/
 
