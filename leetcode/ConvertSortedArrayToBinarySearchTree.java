@@ -14,8 +14,6 @@
 public class ConvertSortedArrayToBinarySearchTree {
     
     public TreeNode sortedArrayToBST(int[] num) {
-        if (num.length == 0)
-            return null;
         return sortedArrayToBSTHelper(num, 0, num.length - 1);
     }
 
