@@ -12,17 +12,21 @@
  * }
  */
 public class ConvertSortedArrayToBinarySearchTree {
+    
     public TreeNode sortedArrayToBST(int[] num) {
-        return helper(num, 0, num.length - 1);
+        if (num.length == 0)
+            return null;
+        return sortedArrayToBSTHelper(num, 0, num.length - 1);
     }
 
-    public TreeNode helper(int[] num, int start, int end) {
-        if(start > end)
+    public TreeNode sortedArrayToBSTHelper(int[] num, int start, int end) {
+        if (start > end)
             return null;
         int mid = start + (end - start) / 2;
         TreeNode root = new TreeNode(num[mid]);
-        root.left = helper(num, start, mid - 1);
-        root.right = helper(num, mid + 1, end);
+        root.left = sortedArrayToBSTHelper(num, start, mid - 1);
+        root.right = sortedArrayToBSTHelper(num, mid + 1, end);
         return root;
     }
+
 }
