@@ -22,13 +22,13 @@ public class SwapNodesInPairs {
 /*************************** updated 2013/12/20 ******************************/
 
     public ListNode swapPairs(ListNode head) {
-        if(head == null || head.next == null)
+        if (head == null || head.next == null)
             return head;
-        ListNode root = head.next;
-        head.next = swapPairs(head.next.next);
-        root.next = head;
-        return root;
-    }
+        ListNode result = head.next;
+        head.next = swapPairs(result.next);
+        result.next = head;
+        return result;
+    } 
 
 /*****************************************************************************/
     
