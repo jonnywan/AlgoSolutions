@@ -33,4 +33,7 @@ public class ReverseWordsInAString {
         return res;
     }
 
+    // without space cost.
+    // ...................
+
 }
