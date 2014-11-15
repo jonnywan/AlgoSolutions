@@ -6,11 +6,35 @@
  * the new length.
  */
 public class RemoveElement {
+
     public int removeElement(int[] A, int elem) {
-        int cnt = 0;
-        for(int i = 0; i < A.length; i++) 
-            if(A[i] != elem)
-                A[cnt++] = A[i];
-        return cnt;
+        int index = 0;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] != elem)
+                A[index++] = A[i];
+        }
+        return index;
     }
+
+/*****************************************************************************/
+
+    public int removeElement(int[] A, int elem) {
+        int i = 0; 
+        int j = A.length - 1;
+        while (i <= j) {
+            while (i < A.length && A[i] != elem) {
+                i++;
+            }
+            while (j >= 0 && A[j] == elem) {
+                j--;
+            }
+            if (i < j && A[i] == elem) {
+                int temp = A[i];
+                A[i] = A[j];
+                A[j] = temp;
+            }
+        }
+        return j + 1;
+    }       
+    
 }
