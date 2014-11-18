@@ -14,7 +14,18 @@
 import java.util.*;
 
 public class GrayCode {
-/*	public ArrayList<Integer> grayCode(int n) {
+
+    public List<Integer> grayCode(int n) {
+        List<Integer> result = new ArrayList<Integer>();
+        for (int i = 0; i < 1 << n; i++) {
+            result.add((i >> 1) ^ i);
+        }
+        return result;
+    }
+
+/*****************************************************************************/
+
+    public ArrayList<Integer> grayCode(int n) {
 		int len = (int) Math.pow(2, n);
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		if(n == 1) {
@@ -34,9 +45,11 @@ public class GrayCode {
 		for(int i = 0; i < len / 2; i++)
 			list.add(Integer.parseInt(gray2[i], 2));
 		return list;
-    }*/
+    }
 	
-/*	public ArrayList<Integer> grayCode(int n) {
+/*****************************************************************************/
+
+	public ArrayList<Integer> grayCode(int n) {
 		int len = (int) Math.pow(2, n);
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		if(n == 1) {
@@ -56,9 +69,11 @@ public class GrayCode {
 			}	
 		}
 		return list;
-	}*/
+	}
 	
-/*	public ArrayList<Integer> grayCode(int n) {
+/*****************************************************************************/
+
+	public ArrayList<Integer> grayCode(int n) {
     	ArrayList<Integer> list = new ArrayList<Integer>();
         if (n <= 1) {
             list.add(0);
@@ -74,15 +89,6 @@ public class GrayCode {
 
         prevList.addAll(list);
         return prevList;
-    }*/
-
-    
-    public List<Integer> grayCode(int n) {
-        List<Integer> result = new ArrayList<Integer>();
-        for (int i = 0; i < 1 << n; i++) {
-            result.add((i >> 1) ^ i);
-        }
-        return result;
     }
 
 }
