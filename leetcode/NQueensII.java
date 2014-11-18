@@ -7,6 +7,9 @@ distinct solutions.
  */
 
 public class NQueensII {
+//TODO
+// http://maskray.me/leetcode/n-queens-ii.cc
+
     int res = 0;
     public int totalNQueens(int n) {
         int[] board = new int[n];
