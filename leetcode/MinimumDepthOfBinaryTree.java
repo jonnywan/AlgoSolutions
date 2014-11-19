@@ -33,17 +33,17 @@ public class MinimumDepthOfBinaryTree {
         int result = 0;
         while (!queue.isEmpty()) {
             result++;
-            Queue<TreeNode> nextLevel = new LinkedList<TreeNode>();
+            Queue<TreeNode> nextLayerl = new LinkedList<TreeNode>();
             while (!queue.isEmpty()) {
                 TreeNode cur = queue.poll();
                 if (cur.left == null && cur.right == null)
                     return result;
                 if (cur.left != null)
-                    nextLevel.add(cur.left);
+                    nextLayerl.add(cur.left);
                 if (cur.right != null)
-                    nextLevel.add(cur.right);
+                    nextLayerl.add(cur.right);
             }
-            queue = nextLevel;
+            queue = nextLayerl;
         }
         return result;
     }
