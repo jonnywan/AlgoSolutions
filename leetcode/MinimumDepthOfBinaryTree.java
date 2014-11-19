@@ -14,36 +14,37 @@
  * }
  */
 public class MinimumDepthOfBinaryTree {
+
     public int minDepth(TreeNode root) {
-        if(root == null) 
+        if (root == null)
             return 0;
-        if(root.left == null || root.right == null)
+        if (root.left == null || root.right == null)
             return 1 + Math.max(minDepth(root.left), minDepth(root.right));
         return 1 + Math.min(minDepth(root.left), minDepth(root.right));
     }
 
-/************************** updated 2013/12/08/ ****************************/
+/*****************************************************************************/
 
     public int minDepth(TreeNode root) {
-        if(root == null)
+        if (root == null)
             return 0;
-        int res = 0;
-        Queue<TreeNode> nodes = new LinkedList<TreeNode>();
-        nodes.add(root);
-        while(!nodes.isEmpty()) {
-            res++;
-            Queue<TreeNode> next = new LinkedList<TreeNode>();
-            while(!nodes.isEmpty()) {
-                TreeNode p = nodes.poll();
-                if(p.left == null && p.right == null)
-                    return res;
-                if(p.left != null)
-                    next.add(p.left);
-                if(p.right != null)
-                    next.add(p.right);
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.add(root);
+        int result = 0;
+        while (!queue.isEmpty()) {
+            result++;
+            Queue<TreeNode> nextLevel = new LinkedList<TreeNode>();
+            while (!queue.isEmpty()) {
+                TreeNode cur = queue.poll();
+                if (cur.left == null && cur.right == null)
+                    return result;
+                if (cur.left != null)
+                    nextLevel.add(cur.left);
+                if (cur.right != null)
+                    nextLevel.add(cur.right);
             }
-            nodes = next;
+            queue = nextLevel;
         }
-        return res;
+        return result;
     }
 }
