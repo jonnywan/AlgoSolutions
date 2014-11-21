@@ -10,6 +10,17 @@
 public class RemoveDuplicatesFromSortedArrayII {
 
     public int removeDuplicates(int[] A) {
+        int index = 0;
+        for (int i = 0; i < A.length; i++) {
+            if (index < 2 || A[index - 1] != A[i] || A[index - 2] != A[i])
+                A[index++] = A[i];
+        }
+        return index;
+    }
+
+/*****************************************************************************/
+
+    public int removeDuplicates(int[] A) {
         if (A.length == 0)
             return A.length;
         int count = 1;
