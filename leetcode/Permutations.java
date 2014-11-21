@@ -25,25 +25,24 @@ public class Permutations {
         return result;
     }
 
-/**************************** updated 2014/01/05 *****************************/
+/*****************************************************************************/
 
-    public ArrayList<ArrayList<Integer>> permute(int[] num) {
-        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        dfs(res, list, num);
-        return res;
+    // This method cannot handle cases that the array of num has same elements;
+    public List<List<Integer>> permute(int[] num) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        dfs(result, new ArrayList<Integer>(), num);
+        return result;
     }
 
-    public void dfs(ArrayList<ArrayList<Integer>> res, ArrayList<Integer> list, 
-            int[] num) {
-        if(list.size() == num.length) {
-            res.add(new ArrayList<Integer>(list));
-            return ;
+    public void dfs(List<List<Integer>> result, List<Integer> list, int[] num) {
+        if (list.size() == num.length) {
+            result.add(new ArrayList<Integer>(list));
+            return;
         }
-        for(int i = 0; i < num.length; i++) {
-            if(list.indexOf(num[i]) == - 1) {
+        for (int i = 0; i < num.length; i++) {
+            if (list.indexOf(num[i]) == -1) {
                 list.add(num[i]);
-                dfs(res, list, num);
+                dfs(result, list, num);
                 list.remove(list.size() - 1);
             }
         }
