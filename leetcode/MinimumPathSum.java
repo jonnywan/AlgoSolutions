@@ -3,11 +3,8 @@
  * left to bottom right which minimizes the sum of all numbers along its path.
 
  * Note: You can only move either down or right at any point in time.
- * 
  */
 public class MinimumPathSum {
-
-/****************************** updated 2013/11/25 ****************************/
 
     public int minPathSum(int[][] grid) {
         int xLen = grid.length;
